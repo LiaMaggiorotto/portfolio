@@ -1,4 +1,8 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 @import '@fontsource/fira-mono';
+
 
 :root {
 	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
@@ -8,27 +12,20 @@
 	--color-creme-brulee: #a1846e;	
 	--color-mocha-latte: #5b4338;
 	--color-espresso-martini: #352620;
-	--color-dark-chocolate: ##161513;
+	--color-dark-chocolate: #161513;
 	--color-olive-branch: #575242;
-	--color-text: rgba(0, 0, 0, 0.7);
-	--column-width: 42rem;
-	--column-margin-top: 4rem;
 	font-family: var(--font-body);
 	color: var(--color-text);
 }
+
 
 body {
 	min-height: 100vh;
 	margin: 0;
 	background-attachment: fixed;
-	background-color: var(--color-bg-1);
+	background-color: var(--color-mocha-latte);
 	background-size: 100vw 100vh;
-	background-image: radial-gradient(
-			50% 50% at 50% 50%,
-			rgba(255, 255, 255, 0.75) 0%,
-			rgba(255, 255, 255, 0) 100%
-		),
-		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+	
 }
 
 h1,
@@ -47,7 +44,8 @@ a {
 }
 
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 h1 {
@@ -59,30 +57,15 @@ h2 {
 	font-size: 1rem;
 }
 
-pre {
-	font-size: 16px;
-	font-family: var(--font-mono);
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
-	overflow-x: auto;
-	color: var(--color-text);
-}
-
-.text-column {
-	display: flex;
-	max-width: 48rem;
-	flex: 0.6;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 auto;
-}
-
 input,
 button {
 	font-size: inherit;
 	font-family: inherit;
+}
+
+button.text {
+	border: none;
+	background: transparent;
 }
 
 button:focus:not(:focus-visible) {
@@ -95,14 +78,3 @@ button:focus:not(:focus-visible) {
 	}
 }
 
-.visually-hidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: auto;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	white-space: nowrap;
-}

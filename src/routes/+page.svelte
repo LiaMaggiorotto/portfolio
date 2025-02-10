@@ -1,4 +1,5 @@
 <script>
+  import Nav from "./_components/Nav.svelte";
 </script>
 
 <svelte:head>
@@ -9,6 +10,7 @@
   />
 </svelte:head>
 
+<Nav />
 <section>Lia Maggiorotto</section>
 
 <style>
