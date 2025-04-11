@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 export default {
   content: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
@@ -12,11 +14,10 @@ export default {
         "olive-branch": "#575242",
         "text": "#333";
       },
-      //   fontFamily: {
-      //     "plex-sans": ["IBM Plex Sans", "sans-serif"],
-      //     "plex-mono": ["IBM Plex Mono", "monospace"],
-      //     graphik: ["Graphik", "sans-serif"],
-      //   },
+      fontFamily: {
+        fraunces: ['Fraunces', ...defaultTheme.fontFamily.serif],
+        inter: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   plugins: [],

@@ -1,4 +1,5 @@
 <script>
+  import Header from "./_components/Header.svelte";
   import Nav from "./_components/Nav.svelte";
 </script>
 
@@ -11,6 +12,7 @@
 </svelte:head>
 
 <Nav />
+<Header />
 
 <style>
 </style>
