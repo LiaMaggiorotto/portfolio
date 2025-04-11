@@ -22,7 +22,7 @@
     class="relative z-10 flex flex-col gap-[20px] justify-center items-center h-full text-white text-center px-4"
   >
     <p
-      class="mt-4 text-lg md:text-xl lg:text-2xl drop-shadow-sm text-coconut-flour"
+      class="mt-4 text-lg md:text-xl lg:text-2xl drop-shadow-sm text-coconut-flour uppercase"
     >
       {subheading}
     </p>
