@@ -11,7 +11,6 @@
 </svelte:head>
 
 <Nav />
-<section>Lia Maggiorotto</section>
 
 <style>
 </style>
