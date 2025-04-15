@@ -7,23 +7,33 @@
 :root {
   --font-fraunces: "Fraunces", serif;
   --font-fira: "Fira Mono", monospace;
+  --color-whipped-cream: #f5f3ee;
   --color-coconut-flour: #dad5ca;
   --color-creme-brulee: #a1846e;
   --color-mocha-latte: #5b4338;
   --color-espresso-martini: #352620;
   --color-dark-chocolate: #161513;
   --color-olive-branch: #575242;
-  --color-mushroom: #333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* Global body styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
   /* background-attachment: fixed; */
   background-color: var(--color-coconut-flour);
   background-size: cover;
-  color: var(--color-text);
+  color: var(--color-espresso-martini);
   font-family: var(--font-fira);
 }
 
@@ -32,7 +42,6 @@ h1,
 h2,
 p,
 a {
-  font-weight: 400;
   margin: 0px;
 }
 
@@ -41,24 +50,24 @@ p {
 }
 
 a {
-  color: var(--color-mushroom);
   text-decoration: none;
+  color: var(--color-espresso-martini);
 }
 
 a:hover {
   text-decoration: none;
   cursor: pointer;
   color: var(--color-dark-chocolate);
-  font-weight: 500;
+  font-weight: bold;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 input,
@@ -71,34 +80,82 @@ button.button-text {
   border: none;
   background: transparent;
   cursor: pointer;
+  font-weight: 500;
+}
+
+button.button-standard {
+  border: none;
+  background-color: var(--color-espresso-martini);
+  color: var(--color-whipped-cream);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+button.button-standard:hover {
+  background-color: var(--color-espresso-martini);
 }
 
 button:focus:not(:focus-visible) {
   outline: none;
 }
 
+.text-whipped-cream {
+  color: var(--color-whipped-cream);
+}
+
+.bg-whipped-cream {
+  background-color: var(--color-whipped-cream);
+}
+
 .text-coconut-flour {
   color: var(--color-coconut-flour);
+}
+
+.bg-coconut-flour {
+  background-color: var(--color-coconut-flour);
 }
 
 .text-creme-brulee {
   color: var(--color-creme-brulee);
 }
 
+.bg-creme-brulee {
+  background-color: var(--color-creme-brulee);
+}
+
 .text-mocha-latte {
   color: var(--color-mocha-latte);
 }
 
-.text-espresso-martin {
-  color: var(--color-espresso-martin);
+.bg-mocha-latte {
+  background-color: var(--color-mocha-latte);
+}
+
+.text-espresso-martini {
+  color: var(--color-espresso-martini);
+}
+
+.bg-espresso-martini {
+  background-color: var(--color-espresso-martini);
 }
 
 .text-dark-chocolate {
   color: var(--color-dark-chocolate);
 }
 
+.bg-dark-chocolate {
+  background-color: var(--color-dark-chocolate);
+}
+
 .text-olive-branch {
   color: var(--color-olive-branch);
+}
+
+.bg-olive-branch {
+  background-color: var(--color-olive-branch);
 }
 
 .font-fraunces {
@@ -108,7 +165,6 @@ button:focus:not(:focus-visible) {
 .font-fira {
   font-family: var(--font-fira);
 }
-
 
 /* Responsive typography */
 @media (min-width: 720px) {
