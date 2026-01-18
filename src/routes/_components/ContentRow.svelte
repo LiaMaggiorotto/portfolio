@@ -1,21 +1,22 @@
 <script>
-  export let title = "My Professional Journey";
-  export let imgSrc = "/images/handsTyping.jpg";
-  export let imgAlt = "Hands typing on a keyboard";
-  export let buttonText = "View Resume";
+  export let title = "";
+  export let imgSrc = "";
+  export let imgAlt = "";
+  export let buttonText = "";
   export let onClick = () => {};
   export let revRow = false;
+  export let sectionId;
 </script>
 
 <section
-  id="resume"
-  class="Resume flex flex-row bg-whipped-cream {revRow
+  id={sectionId}
+  class="ContentRow flex flex-row bg-whipped-cream {revRow
     ? 'flex-row-reverse'
     : ''}"
 >
   <!-- Left Side: Text -->
   <div
-    class="Resume-text w-[50%] flex flex-col text-center justify-center items-center gap-[20px]"
+    class="ContentRow-text w-[50%] flex flex-col text-center justify-center items-center gap-[20px]"
   >
     <h2 class="font-[fraunces] text-3xl md:text-4xl">
       {title}
@@ -29,7 +30,7 @@
 
   <!-- Right Side: Images -->
   <div
-    class="Project-image w-[50%] h-[526px] relative flex items-center justify-center bg-dark-chocolate"
+    class="ContentRow-image w-[50%] h-[526px] relative flex items-center justify-center bg-dark-chocolate"
   >
     <div class="relative w-full h-full">
       <img

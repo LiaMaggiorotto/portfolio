@@ -1,9 +1,12 @@
 <script>
+  import { goto } from "$app/navigation";
+
   function scrollToTop() {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
+    goto("/");
   }
 </script>
 
@@ -17,8 +20,8 @@
   >
   <div class="flex gap-[25px]">
     <a href="#about" class="Nav-link text-[15px]">About</a>
-    <a href="#portfolio" class="Nav-link text-[15px]">Portfolio</a>
     <a href="#resume" class="Nav-link text-[15px]">Resume</a>
+    <a href="#portfolio" class="Nav-link text-[15px]">Portfolio</a>
     <a
       href="https://github.com/LiaMaggiorotto"
       target="_blank"
