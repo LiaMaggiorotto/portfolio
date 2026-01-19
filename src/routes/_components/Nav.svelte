@@ -22,11 +22,6 @@
     <a href="#about" class="Nav-link text-[15px]">About</a>
     <a href="#resume" class="Nav-link text-[15px]">Resume</a>
     <a href="#portfolio" class="Nav-link text-[15px]">Portfolio</a>
-    <a
-      href="https://github.com/LiaMaggiorotto"
-      target="_blank"
-      class="Nav-link text-[15px]">GitHub</a
-    >
     <a href="#contact" class="Nav-link text-[15px]">Contact</a>
   </div>
 </nav>
