@@ -37,7 +37,6 @@
         src={imgSrc}
         alt={imgAlt}
         class="w-[100%] h-[100%] shadow-xl rounded object-bottom-center animate-fade-in z-10"
-        style="animation-delay: 0.2s"
       />
     </div>
   </div>

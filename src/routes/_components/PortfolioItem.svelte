@@ -23,9 +23,9 @@
 
   <!-- Bottom Text -->
   <div
-    class="Project-image w-[100%] relative flex flex-col items-center justify-center text-center bg-dark-chocolate py-[15px] px-[20px] gap-[15px] text-creme-brulee shadow-xl rounded-[4px] animate-fade-in"
+    class="Project-image w-[100%] relative flex flex-col items-center justify-center text-center bg-dark-chocolate py-[25px] px-[20px] gap-[15px] text-creme-brulee shadow-xl rounded-[4px] animate-fade-in"
   >
-    <h3 class="text-2xl font-bold mb-4 text-coconut-flour">{title}</h3>
+    <h3 class="text-2xl font-bold mb-4 text-coconut-flour m-[0px]">{title}</h3>
     <p class="max-h-[245px] overflow-auto">{description}</p>
     <button
       on:click={() => goto(projectLink)}
