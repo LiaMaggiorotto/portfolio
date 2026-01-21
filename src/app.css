@@ -95,7 +95,22 @@ button.button-standard {
 }
 
 button.button-standard:hover {
-  background-color: var(--color-espresso-martini);
+  background-color: var(--color-mocha-latte);
+}
+
+button.button-light {
+  border: none;
+  background-color: var(--color-whipped-cream);
+  color: var(--color-espresso-martini);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+button.button-light:hover {
+  background-color: var(--color-coconut-flour);
 }
 
 button:focus:not(:focus-visible) {

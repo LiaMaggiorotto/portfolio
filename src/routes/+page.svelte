@@ -35,15 +35,16 @@
   >
     <p class="w-[80%]">
       After completing the Software Engineering Immersive at General Assembly, I
-      joined my current company and have grown from a junior developer to a tech
-      lead over the past 5 years. Along the way, I’ve contributed to major
-      projects, mentored fellow developers, and played a key role in a committee
-      driving positive cultural change across the organization.
+      joined my current company and grew from junior developer to tech lead over
+      five years. During that time I worked across product, SEO, data, and
+      internal tools, and contributed to culture and mentorship initiatives that
+      shaped how our small engineering team operates today.
     </p>
-
     <p class="w-[80%]">
-      My background has shaped the engineer I am today, grounded in real-world
-      problem solving, customer empathy, and a growth-first mindset.
+      That experience accelerated my growth as an engineer and clarified what I
+      care about professionally: building useful products, collaborating across
+      functions, and raising the bar for how teams work together. It is the
+      direction I plan to continue investing in.
     </p>
   </div>
 </ContentRow>

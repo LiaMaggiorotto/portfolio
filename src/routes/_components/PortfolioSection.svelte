@@ -4,7 +4,7 @@
 
 <section
   id="portfolio"
-  class="w-full flex flex-col items-center justify-center gap-[40px] py-[40px] bg-espresso-martini"
+  class="w-full flex flex-col items-center justify-center gap-[95px] py-[40px] px-[40px] bg-espresso-martini"
 >
   <div
     class="Portfolio-header relative flex justify-center items-center w-full py-24"
@@ -30,7 +30,7 @@
     </div>
   </div>
   <div
-    class="relative grid grid-cols-1 md:grid-cols-3 gap-[60px] w-full py-24 px-8"
+    class="relative grid gap-[30px] grid-cols-2 w-full py-24 px-8 max-w-[90%]"
   >
     <!-- Project 1 -->
     <PortfolioItem
@@ -51,6 +51,16 @@
       buttonText="View Portfolio"
     />
     <!-- Project 3 -->
+    <PortfolioItem
+      title="Open Source UI Component Library"
+      description="Created a reusable Svelte component library published to npm, with full documentation, Storybook integration, and automated tests."
+      imgSrc=""
+      imgAlt="Open Source UI Component Library screenshot"
+      projectLink="https://liamaggiorotto.com"
+      buttonText="View on GitHub"
+    />
+
+    <!-- Project 4 -->
     <PortfolioItem
       title="Open Source UI Component Library"
       description="Created a reusable Svelte component library published to npm, with full documentation, Storybook integration, and automated tests."

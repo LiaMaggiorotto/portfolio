@@ -10,25 +10,27 @@
 </script>
 
 <!-- Top Image -->
-<div class="PortfolioItem w-[calc(100%/3)]">
+<div class="PortfolioItem flex flex-col gap-[20px]">
   <div class="Portfolio-image">
     <div class="relative w-full h-full">
       <img
         src={imgSrc}
         alt={imgAlt}
-        class="w-[100%] h-[100%] md:w-[220px] shadow-xl rounded animate-fade-in z-10"
-        style="animation-delay: 0.2s"
+        class="w-[100%] h-[100%] md:w-[220px] shadow-xl rounded-[4px] animate-fade-in z-10"
       />
     </div>
   </div>
 
   <!-- Bottom Text -->
   <div
-    class="Project-image w-[50%] h-[526px] relative flex items-center justify-center bg-dark-chocolate"
+    class="Project-image w-[100%] relative flex flex-col items-center justify-center text-center bg-dark-chocolate py-[15px] px-[20px] gap-[15px] text-creme-brulee shadow-xl rounded-[4px] animate-fade-in"
   >
-    {title}
-    <p>{description}</p>
-    <button on:click={() => goto(projectLink)} class="w-fit button-standard">
+    <h3 class="text-2xl font-bold mb-4 text-coconut-flour">{title}</h3>
+    <p class="max-h-[245px] overflow-auto">{description}</p>
+    <button
+      on:click={() => goto(projectLink)}
+      class="w-fit button-light text-creme-brulee"
+    >
       {buttonText}
     </button>
   </div>

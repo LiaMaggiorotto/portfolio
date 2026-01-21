@@ -16,7 +16,7 @@
 >
   <!-- Left Side: Text -->
   <div
-    class="ContentRow-text w-[50%] flex flex-col text-center justify-center items-center gap-[20px]"
+    class="ContentRow-text w-[50%] flex flex-col text-center justify-center items-center gap-[20px] p-[20px]"
   >
     <h2 class="font-[fraunces] text-3xl md:text-4xl">
       {title}
@@ -36,7 +36,7 @@
       <img
         src={imgSrc}
         alt={imgAlt}
-        class="w-[100%] h-[100%] md:w-[220px] shadow-xl rounded animate-fade-in z-10"
+        class="w-[100%] h-[100%] shadow-xl rounded object-bottom-center animate-fade-in z-10"
         style="animation-delay: 0.2s"
       />
     </div>
