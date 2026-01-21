@@ -8,7 +8,7 @@
   <div class="About-image w-[50%] relative flex justify-center">
     <!-- Background box behind the image -->
     <div
-      class="absolute left-[7.5rem] w-[315px] h-[420px] bg-mocha-latte rounded-[4px] animate-fade-in"
+      class="absolute left-[7.5rem] w-[315px] h-[420px] bg-mocha-latte rounded-[4px]"
     ></div>
 
     <!-- Foreground image container -->
