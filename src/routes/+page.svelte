@@ -6,6 +6,7 @@
   import PortfolioSection from "./_components/PortfolioSection.svelte";
 
   const openResume = () => {
+    console.log('clicked');
     window.open("/resume.pdf", "_blank");
   };
 </script>
@@ -27,11 +28,11 @@
   imgAlt="Hands typing on a keyboard"
   sectionId="resume"
   buttonText="View Resume"
-  on:onClick={openResume}
+  onClick={openResume}
 >
   <div
     class="flex flex-col text-center justify-center items-center gap-[20px]"
-    slot="descripton"
+    slot="description"
   >
     <p class="w-[80%]">
       After completing the Software Engineering Immersive at General Assembly, I

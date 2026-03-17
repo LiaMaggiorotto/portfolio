@@ -30,7 +30,7 @@
     </div>
   </div>
   <div
-    class="relative grid gap-[30px] grid-cols-2 w-full py-24 px-8 max-w-[90%]"
+    class="relative grid gap-8 grid-cols-2 w-full py-24 px-8 max-w-[90%]"
   >
     <!-- Project 1 -->
     <PortfolioItem

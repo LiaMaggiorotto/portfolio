@@ -6,6 +6,7 @@
   export let onClick = () => {};
   export let revRow = false;
   export let sectionId;
+
 </script>
 
 <section
@@ -21,9 +22,9 @@
     <h2 class="font-[fraunces] text-3xl md:text-4xl">
       {title}
     </h2>
-    <slot name="descripton" />
+    <slot name="description" />
 
-    <button on:click={() => onClick?.()} class="w-fit button-standard">
+    <button on:click={() => {onClick?.()}} class="w-fit button-standard">
       {buttonText}
     </button>
   </div>
