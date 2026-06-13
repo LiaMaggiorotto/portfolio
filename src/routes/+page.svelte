@@ -4,9 +4,10 @@
   import About from "./_components/About.svelte";
   import ContentRow from "./_components/ContentRow.svelte";
   import PortfolioSection from "./_components/PortfolioSection.svelte";
+  import Recognition from "./_components/Recognition.svelte";
+  import Contact from "./_components/Contact.svelte";
 
   const openResume = () => {
-    console.log('clicked');
     window.open("/resume.pdf", "_blank");
   };
 </script>
@@ -15,7 +16,7 @@
   <title>Lia Maggiorotto</title>
   <meta
     name="description"
-    content="As a full-stack engineer based in Kansas City, I bring a unique blend of technical expertise and people-first problem solving to every project. My journey from managing multi-million dollar properties to engineering software solutions has given me an invaluable perspective on how technology can transform businesses and user experiences"
+    content="Full-stack software engineer based in Kansas City. Five years of growth from junior developer to tech lead — building products, scaling teams, and raising the bar for how engineers work together."
   />
 </svelte:head>
 
@@ -30,27 +31,22 @@
   buttonText="View Resume"
   onClick={openResume}
 >
-  <div
-    class="flex flex-col text-center justify-center items-center gap-[20px]"
-    slot="description"
-  >
-    <p class="w-[80%]">
+  <div slot="description" class="flex flex-col gap-[16px]">
+    <p class="leading-relaxed">
       After completing the Software Engineering Immersive at General Assembly, I
       joined my current company and grew from junior developer to tech lead over
       five years. During that time I worked across product, SEO, data, and
       internal tools, and contributed to culture and mentorship initiatives that
       shaped how our small engineering team operates today.
     </p>
-    <p class="w-[80%]">
+    <p class="leading-relaxed">
       That experience accelerated my growth as an engineer and clarified what I
       care about professionally: building useful products, collaborating across
-      functions, and raising the bar for how teams work together. It is the
-      direction I plan to continue investing in.
+      functions, and raising the bar for how teams work together.
     </p>
   </div>
 </ContentRow>
 
 <PortfolioSection />
-
-<style>
-</style>
+<Recognition />
+<Contact />
