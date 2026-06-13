@@ -1,36 +1,35 @@
 <script>
-  let subheading = "Full Stack Software Engineer";
-  let heading =
-    "Bringing strategic insight, human connection, and technical precision to every line of code.";
-  let small = "Let’s build something meaningful.";
+  let subheading = "Full Stack Software Engineer — Kansas City";
+  let small = "Let's build something meaningful.";
 </script>
 
-<section class="Header relative w-full h-[75vh] lg:h-[90vh]">
-  <!-- Background image -->
+<section class="Header relative w-full h-[80vh] lg:h-[92vh]">
   <img
     src="/images/header.jpg"
     alt="Computer and coffee"
-    class="absolute inset-0 w-full h-full object-cover object-bottom
-"
+    class="absolute inset-0 w-full h-full object-cover object-bottom"
   />
 
-  <!-- Overlay -->
   <div class="absolute inset-0 h-full w-full bg-[#35262099]"></div>
 
-  <!-- Text content -->
   <div
-    class="relative z-10 flex flex-col gap-[20px] justify-center items-center h-full text-white text-center px-4"
+    class="relative z-10 flex flex-col gap-[28px] justify-center items-center h-full text-white text-center px-6"
   >
-    <h3
-      class="mt-4 text-lg md:text-xl lg:text-2xl drop-shadow-sm text-coconut-flour uppercase"
-    >
+    <p class="text-[11px] uppercase tracking-[0.3em] text-coconut-flour opacity-80">
       {subheading}
-    </h3>
+    </p>
+
     <h1
-      class="text-4xl md:text-5xl lg:text-6xl font-bold font-[fraunces] text-[var(--color-coconut-flour)] drop-shadow-md w-[75%]"
+      class="text-5xl md:text-6xl lg:text-7xl font-[fraunces] text-coconut-flour leading-[1.1] w-[80%] max-w-[900px] drop-shadow-md"
     >
-      {heading}
+      Bringing <em class="not-italic italic font-light">strategic insight,</em><br />
+      human connection,<br />
+      and <span class="font-bold">technical precision</span><br />
+      to every line of code.
     </h1>
-    <small class="italic text-coconut-flour">{small}</small>
+
+    <div class="w-[40px] h-[1px] bg-coconut-flour opacity-50 mt-2"></div>
+
+    <small class="italic text-coconut-flour opacity-70 text-[13px] tracking-wide">{small}</small>
   </div>
 </section>
