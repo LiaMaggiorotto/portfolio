@@ -1,6 +1,8 @@
 <script>
   export let data;
   const { project } = data;
+
+  let heroError = false;
 </script>
 
 <svelte:head>
@@ -21,11 +23,12 @@
 
 <!-- Hero image -->
 <div class="w-full h-[420px] bg-dark-chocolate overflow-hidden">
-  {#if project.imgSrc}
+  {#if project.imgSrc && !heroError}
     <img
       src={project.imgSrc}
       alt={project.title}
       class="w-full h-full object-cover opacity-90"
+      on:error={() => (heroError = true)}
     />
   {:else}
     <div class="w-full h-full flex items-center justify-center">

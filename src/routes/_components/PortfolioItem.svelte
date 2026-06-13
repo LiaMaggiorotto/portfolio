@@ -5,6 +5,8 @@
   export let imgAlt = "";
   export let techStack = [];
   export let slug = "";
+
+  let imgError = false;
 </script>
 
 <a
@@ -13,11 +15,12 @@
 >
   <!-- Image -->
   <div class="w-full h-[220px] bg-dark-chocolate overflow-hidden">
-    {#if imgSrc}
+    {#if imgSrc && !imgError}
       <img
         src={imgSrc}
         alt={imgAlt}
         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        on:error={() => (imgError = true)}
       />
     {:else}
       <div class="w-full h-full flex items-center justify-center opacity-20">
