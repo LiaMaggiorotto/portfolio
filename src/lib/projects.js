@@ -4,7 +4,7 @@ export const projects = [
   title: 'Post-Apply Lead Routing Engine',
   shortDescription:
     'Designed and built a weighted A/B routing engine with sticky lead assignment, per-client feature flags, server-side validation, a full admin UI, and a 37-case test suite — shipped as a dark launch with zero disruption to existing lead flow.',
-  longDescription: `Most routing systems are a flag and a coin flip. This one needed to be sticky, auditable, weighted, and safe to roll back — across clients with different configurations running in production simultaneously.
+  longDescription: `Most routing systems are a flag and a coin flip. This one needed to be sticky, auditable, weighted, and safe to roll back across clients with different configurations running in production simultaneously.
 
 I designed the full architecture: a weighted-bucket router that assigns leads to flow variants on first contact and locks that assignment on subsequent touches. Per-client feature flags let the business enable or disable the experiment independently for each account without a deploy. A migration script handled backfilling existing records cleanly, and the admin UI gave non-engineers visibility into routing state without needing to touch the database.
 

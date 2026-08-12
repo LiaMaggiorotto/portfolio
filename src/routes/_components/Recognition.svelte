@@ -1,28 +1,28 @@
 <script>
   const quotes = [
     {
-      text: "Lia consistently goes above and beyond in everything she takes on. Her technical contributions are exceptional, but what truly stands out is her ability to bring people together and move projects forward with clarity. She's the kind of engineer every team hopes to have.",
-      name: "Sarah M.",
-      title: "Engineering Manager",
-      context: "Employee of the Month Nomination, Q3 2023",
+      text: "Lia consistently demonstrates exceptional teamwork, working seamlessly with colleagues to ensure that goals are met efficiently. Her ability to collaborate effectively fosters a culture of support and shared success, encouraging those around her to achieve their best. Lia is always seeking out new ideas and approaches, tying her curiosity to practical solutions that benefit the team and organization as a whole.",
+      name: "Anonymous",
+      title: "Peer Nomination",
+      context: "Employee of the Month · CDLLife",
     },
     {
-      text: "Working alongside Lia on the analytics platform was one of the most productive collaborations I've experienced. She has an uncanny ability to translate complex requirements into clean, thoughtful solutions — and she makes the process feel effortless.",
-      name: "Derek T.",
-      title: "Senior Product Designer",
-      context: "Peer Recognition, 2023",
+      text: "Lia is an awesome part of the team. Not only is she a leader in her team, driving the next evolution of CDLConnect, but she is also a leader in the company, driving forward initiatives to ensure continual improvement in employee education and company culture.",
+      name: "Anonymous",
+      title: "Peer Nomination",
+      context: "Employee of the Month · CDLLife",
     },
     {
-      text: "Lia was hand-selected to lead our engineering culture initiative because of the trust she'd built across every team she's touched. She approaches leadership the same way she approaches code — with precision, empathy, and a genuine investment in making things better.",
-      name: "James R.",
-      title: "VP of Technology",
-      context: "Culture Initiative Leadership Nomination",
+      text: "I worked with Lia on the CDLLife Student website launch, and her organization, attention to detail, and dedication truly stood out throughout the entire project. She took ownership of the initiative and did a great job managing expectations along the way. Her impact on getting it launched is immeasurable. It's people like Lia who make working at CDLLife such a great experience.",
+      name: "Anonymous",
+      title: "Peer Nomination",
+      context: "Employee of the Month · CDLLife",
     },
     {
-      text: "Lia's SEO landing page system transformed our content strategy. The speed, the architecture, the attention to maintainability — it was exactly what we needed, and she delivered it ahead of schedule. A true cross-functional partner.",
-      name: "Allison K.",
-      title: "Director of Content & SEO",
-      context: "Project Review, 2022",
+      text: "It's a rare opportunity to report to a manager who is both professional and extremely personable. A phrase that comes to mind when I think of her management style is \"straight-forward and honest with a smile\". I'm always impressed by Lia's ability to handle discontented residents with ease and communicate policies with empathy. Any company would be lucky to have her.",
+      name: "Erica Megan Dixon, CAM",
+      title: "Property Operations Leader · Luxury Multifamily",
+      context: "LinkedIn Recommendation · 2018",
     },
   ];
 </script>

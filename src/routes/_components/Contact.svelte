@@ -17,10 +17,10 @@
 
   <!-- Email -->
   <a
-    href="mailto:hello@liamaggiorotto.com"
+    href="mailto:liamaggiorotto@gmail.com"
     class="font-[fraunces] text-2xl text-coconut-flour hover:text-creme-brulee transition-colors duration-300 mb-[48px]"
   >
-    hello@liamaggiorotto.com
+    liamaggiorotto@gmail.com
   </a>
 
   <!-- Social links -->
