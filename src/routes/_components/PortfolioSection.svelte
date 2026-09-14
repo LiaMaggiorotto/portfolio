@@ -20,7 +20,7 @@
   </div>
 
   <!-- Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-[28px] w-full max-w-5xl">
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-[28px] w-full max-w-5xl">
     {#each projects as project}
       <PortfolioItem
         title={project.title}
