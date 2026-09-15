@@ -18,9 +18,9 @@ The implementation shipped as a dark launch — routing logic running in the bac
 
 {
   slug: 'appadmin2-nextjs-rewrite',
-  title: 'Internal Admin Panel — Ground-Up Next.js Rewrite',
+  title: 'Internal Mobile App Admin Panel - Ground-Up Next.js Rewrite',
   shortDescription:
-    'Rewrote a legacy SvelteKit admin panel in Next.js 16 App Router in six days — delivering auth, a proxy API gateway, full CRUD with file uploads, theming, and CI/CD from scratch.',
+    'Rewrote a legacy SvelteKit admin panel in Next.js 16 App Router in six days, delivering authentication, a proxy API gateway, full CRUD with file uploads, theming, and CI/CD from scratch.',
   longDescription: `The existing internal admin panel had accumulated enough debt that a rewrite was faster than a refactor. I took full ownership: architecture decisions, framework selection, implementation, and deployment — all in six days.
 
 The new system is built on Next.js 16 with the App Router, using iron-session for auth and a custom proxy API gateway to isolate internal service calls from the client. Deal Depot CRUD includes file upload handling, and the UI was built with theming support so it can adapt across internal tools without restyling from scratch. CI/CD was configured from zero alongside the build.
@@ -44,7 +44,7 @@ The architecture prioritized cost and reliability: SHA-256 content hashing to sk
 
 The entire thing was engineered within Node v10 constraints, which meant no OpenAI SDK — raw HTTPS requests only. That constraint forced a cleaner separation between transport, parsing, and business logic than the SDK would have encouraged. The pipeline processed the full backlog and has run in production since, feeding classification data into downstream features.`,
   techStack: ['Node.js', 'MongoDB', 'OpenAI API', 'TypeScript'],
-  imgSrc: '/images/post-analysis.png',
+  imgSrc: '/images/ai-post-analysis-pipeline.svg',
   images: [],
   liveUrl: null,
   githubUrl: null,

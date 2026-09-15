@@ -26,11 +26,11 @@
       apart. I spent six years mastering high-stakes property management,
       quickly rising from intern to managing one of Kansas City's most luxurious
       properties. That experience sharpened my communication, resilience, and
-      leadership — all of which I now bring to tech.
+      leadership, all of which I now bring to tech.
     </p>
 
     <p class="text-espresso-martini leading-relaxed">
-      As a developer, I don't just solve problems — I understand people. I bridge
+      As a developer, I don't just solve problems, I understand people. I bridge
       gaps between technical teams and stakeholders, ask the right questions,
       and drive solutions forward with clarity and empathy. I've been
       hand-selected for culture-shaping initiatives and leadership roles because
@@ -39,7 +39,7 @@
 
     <p class="text-mocha-latte leading-relaxed font-[fraunces] italic text-lg">
       It's not just what I build.<br />
-      It's how I build — with curiosity, care, and collaboration.
+      It's how I build - with curiosity, care, and collaboration.
     </p>
   </div>
 </section>
