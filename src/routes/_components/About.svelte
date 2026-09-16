@@ -1,9 +1,9 @@
 <section
   id="about"
-  class="About flex flex-row gap-[60px] py-[6rem] px-[5rem] bg-coconut-flour"
+  class="About flex flex-col md:flex-row gap-[32px] md:gap-[60px] py-[3rem] px-[1.5rem] md:py-[6rem] md:px-[5rem] bg-coconut-flour"
 >
   <!-- Image side -->
-  <div class="About-image w-[45%] flex justify-center items-start">
+  <div class="About-image w-full md:w-[45%] flex justify-center items-start">
     <img
       src="/images/lia.jpeg"
       alt="Lia Maggiorotto"
@@ -12,7 +12,7 @@
   </div>
 
   <!-- Text side -->
-  <div class="About-text w-[55%] flex flex-col justify-center gap-[24px]">
+  <div class="About-text w-full md:w-[55%] flex flex-col justify-center gap-[24px]">
     <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee">About</p>
 
     <h2 class="font-[fraunces] text-4xl leading-tight">
@@ -22,19 +22,15 @@
     <div class="w-[40px] h-[1px] bg-creme-brulee"></div>
 
     <p class="text-espresso-martini leading-relaxed">
-      My path to engineering wasn't traditional, and that's exactly what sets me
-      apart. I spent six years mastering high-stakes property management,
-      quickly rising from intern to managing one of Kansas City's most luxurious
-      properties. That experience sharpened my communication, resilience, and
-      leadership, all of which I now bring to tech.
+     My path to engineering wasn't traditional, and that's exactly what shaped the way I work. Before tech, I spent six years in high-stakes property management, progressing from intern to managing an $86 million luxury high-rise in downtown Kansas City with 307 apartment homes, 330,000 square feet, and a team of 14. Along the way, I broke company records and sharpened the communication, resilience, and leadership I now bring to tech.
     </p>
 
     <p class="text-espresso-martini leading-relaxed">
-      As a developer, I don't just solve problems, I understand people. I bridge
-      gaps between technical teams and stakeholders, ask the right questions,
-      and drive solutions forward with clarity and empathy. I've been
-      hand-selected for culture-shaping initiatives and leadership roles because
-      of this very approach.
+    I attribute much of my growth to adaptable thinking and a genuine growth mindset. I'm comfortable not knowing something yet. I ask questions, learn quickly, challenge my assumptions, and adjust when the evidence points somewhere new.
+    </p>
+
+    <p class="text-espresso-martini leading-relaxed">
+     As an engineer, I bring that same mindset to people and problems. I bridge technical and non-technical perspectives, uncover the real problem, and move work forward with clarity and empathy.
     </p>
 
     <p class="text-mocha-latte leading-relaxed font-[fraunces] italic text-lg">

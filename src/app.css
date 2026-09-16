@@ -1,7 +1,8 @@
 /* app.css */
 
 /* Tailwind's directives */
-@tailwind utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
 
 /* Custom global styles and CSS variables */
 :root {

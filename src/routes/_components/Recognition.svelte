@@ -1,4 +1,6 @@
 <script>
+  import { fade } from "svelte/transition";
+
   const quotes = [
     {
       text: "Lia consistently demonstrates exceptional teamwork, working seamlessly with colleagues to ensure that goals are met efficiently. Her ability to collaborate effectively fosters a culture of support and shared success, encouraging those around her to achieve their best. Lia is always seeking out new ideas and approaches, tying her curiosity to practical solutions that benefit the team and organization as a whole.",
@@ -25,37 +27,78 @@
       context: "LinkedIn Recommendation · 2018",
     },
   ];
+
+  let current = 0;
+
+  function next() {
+    current = (current + 1) % quotes.length;
+  }
+
+  function prev() {
+    current = (current - 1 + quotes.length) % quotes.length;
+  }
+
+  function goTo(i) {
+    current = i;
+  }
 </script>
 
 <section
   id="recognition"
-  class="w-full py-[6rem] px-[4rem] bg-whipped-cream"
+  class="w-full py-[3rem] px-[1.5rem] md:py-[6rem] md:px-[4rem] bg-whipped-cream"
 >
   <!-- Header -->
-  <div class="max-w-5xl mx-auto flex flex-col items-center text-center mb-[4rem]">
+  <div class="max-w-2xl mx-auto flex flex-col items-center text-center mb-[3rem] md:mb-[4rem]">
     <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee mb-[16px]">Recognition</p>
-    <h2 class="font-[fraunces] text-5xl text-dark-chocolate leading-tight">
+    <h2 class="font-[fraunces] text-4xl md:text-5xl text-dark-chocolate leading-tight">
       What <em class="italic font-light">people say.</em>
     </h2>
     <div class="w-[40px] h-[1px] bg-creme-brulee mt-[20px]"></div>
   </div>
 
-  <!-- Quote grid -->
-  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-[24px]">
-    {#each quotes as quote}
-      <div
-        class="bg-white rounded-[4px] shadow-sm border-l-[3px] border-creme-brulee p-[36px] flex flex-col gap-[20px]"
-      >
-        <span class="font-[fraunces] text-[56px] text-creme-brulee leading-none select-none">"</span>
-        <p class="text-espresso-martini leading-relaxed text-[14px] -mt-[20px]">
-          {quote.text}
-        </p>
-        <div class="mt-auto pt-[16px] border-t border-coconut-flour">
-          <p class="font-semibold text-dark-chocolate text-[13px]">{quote.name}</p>
-          <p class="text-[12px] text-mocha-latte">{quote.title}</p>
-          <p class="text-[11px] uppercase tracking-widest text-creme-brulee mt-[4px]">{quote.context}</p>
+  <!-- Quote spotlight -->
+  <div class="Recognition-stage relative max-w-2xl mx-auto">
+    <button
+      on:click={prev}
+      aria-label="Previous recognition"
+      class="Recognition-arrow absolute left-0 top-1/2 -translate-y-1/2 z-10 shrink-0 w-[32px] h-[32px] md:w-[44px] md:h-[44px] rounded-full border border-creme-brulee text-creme-brulee flex items-center justify-center hover:bg-creme-brulee hover:text-whipped-cream transition-colors duration-200 cursor-pointer"
+    >
+      ‹
+    </button>
+
+    <button
+      on:click={next}
+      aria-label="Next recognition"
+      class="Recognition-arrow absolute right-0 top-1/2 -translate-y-1/2 z-10 shrink-0 w-[32px] h-[32px] md:w-[44px] md:h-[44px] rounded-full border border-creme-brulee text-creme-brulee flex items-center justify-center hover:bg-creme-brulee hover:text-whipped-cream transition-colors duration-200 cursor-pointer"
+    >
+      ›
+    </button>
+
+    <div class="px-[44px] md:px-[64px] min-h-[220px] flex items-center justify-center">
+      {#key current}
+        <div in:fade={{ duration: 250 }} class="flex flex-col items-center text-center gap-[20px]">
+          <span class="font-[fraunces] text-[40px] text-creme-brulee leading-none select-none">"</span>
+          <p class="font-[fraunces] italic text-[18px] md:text-[22px] text-espresso-martini leading-relaxed -mt-[8px]">
+            {quotes[current].text}
+          </p>
+          <div>
+            <p class="font-semibold text-dark-chocolate text-[13px]">{quotes[current].name}</p>
+            <p class="text-[12px] text-mocha-latte">{quotes[current].title}</p>
+            <p class="text-[11px] uppercase tracking-widest text-creme-brulee mt-[4px]">{quotes[current].context}</p>
+          </div>
         </div>
-      </div>
+      {/key}
+    </div>
+  </div>
+
+  <!-- Dots -->
+  <div class="flex justify-center gap-[10px] mt-[32px]">
+    {#each quotes as _, i}
+      <button
+        on:click={() => goTo(i)}
+        aria-label="Go to recognition {i + 1}"
+        class="Recognition-dot w-[7px] h-[7px] rounded-full transition-colors duration-200 cursor-pointer {i === current ? 'bg-creme-brulee' : 'bg-coconut-flour'}"
+      ></button>
     {/each}
   </div>
 </section>

@@ -33,16 +33,10 @@
 >
   <div slot="description" class="flex flex-col gap-[16px]">
     <p class="leading-relaxed">
-      After completing the Software Engineering Immersive at General Assembly, I
-      joined my current company and grew from junior developer to tech lead over
-      five years. During that time I worked across product, SEO, data, and
-      internal tools, and contributed to culture and mentorship initiatives that
-      shaped how our small engineering team operates today.
+    After completing the Software Engineering Immersive at General Assembly, I joined my current company and grew from junior developer to tech lead over nearly six years. During that time I worked across product, SEO, data, and internal tools, and contributed to culture and mentorship initiatives that shaped how our small engineering team operates today.
     </p>
     <p class="leading-relaxed">
-      That experience accelerated my growth as an engineer and clarified what I
-      care about professionally: building useful products, collaborating across
-      functions, and raising the bar for how teams work together.
+    That experience shaped the way I approach engineering. I tend to gravitate toward the problems that aren't immediately obvious: unfamiliar systems, stubborn bugs, stalled projects, and changes where the real challenge is understanding the ripple effects. I want to know what's actually happening, why it's happening, and how we can leave the system better than we found it.
     </p>
   </div>
 </ContentRow>

@@ -10,7 +10,7 @@ I designed the full architecture: a weighted-bucket router that assigns leads to
 
 The implementation shipped as a dark launch — routing logic running in the background while the existing flow continued uninterrupted — which meant the rollout carried zero risk to live lead volume. A 37-case Mocha spec suite covered edge cases across variant assignment, sticky behavior, flag evaluation, and server-side validation. This is the kind of system design work I'm drawn to: defensively built, operationally transparent, and safe to hand off.`,
   techStack: ['Node.js', 'Express', 'MongoDB', 'Mocha', 'SvelteKit'],
-  imgSrc: '/images/leadflow.png',
+  imgSrc: '/images/lead-routing-engine.svg',
   images: [],
   liveUrl: null,
   githubUrl: null,
@@ -26,7 +26,7 @@ The implementation shipped as a dark launch — routing logic running in the bac
 The new system is built on Next.js 16 with the App Router, using iron-session for auth and a custom proxy API gateway to isolate internal service calls from the client. Deal Depot CRUD includes file upload handling, and the UI was built with theming support so it can adapt across internal tools without restyling from scratch. CI/CD was configured from zero alongside the build.
 
 The constraint that made this interesting wasn't the feature set — it was the timeline. Six days meant every architectural decision had to be right the first time, with no room to backtrack on framework choices or data patterns mid-build. The panel has been in production use by internal teams since launch.`,
-  techStack: ['Next.js', 'React', 'TypeScript', 'iron-session', 'GitHub Actions'],
+  techStack: ['Next.js', 'React', 'TypeScript', 'iron-session', 'GitHub Actions', 'Shadcn UI'],
   imgSrc: '/images/appadmin2.png',
   images: [],
   liveUrl: null,
@@ -42,7 +42,7 @@ The constraint that made this interesting wasn't the feature set — it was the 
 
 The architecture prioritized cost and reliability: SHA-256 content hashing to skip reprocessing identical posts, token-optimized prompts to minimize API spend, and strict output validation to catch malformed model responses before they touched the database. Partial MongoDB indexes kept query performance tight on a growing collection.
 
-The entire thing was engineered within Node v10 constraints, which meant no OpenAI SDK — raw HTTPS requests only. That constraint forced a cleaner separation between transport, parsing, and business logic than the SDK would have encouraged. The pipeline processed the full backlog and has run in production since, feeding classification data into downstream features.`,
+The entire thing was engineered within Node v10 constraints, which meant no OpenAI SDK — raw HTTPS requests only. That constraint forced a cleaner separation between transport, parsing, and business logic than the SDK would have encouraged. The pipeline processed the full backlog and new posts, feeding classification data into downstream features.`,
   techStack: ['Node.js', 'MongoDB', 'OpenAI API', 'TypeScript'],
   imgSrc: '/images/ai-post-analysis-pipeline.svg',
   images: [],
@@ -52,14 +52,14 @@ The entire thing was engineered within Node v10 constraints, which meant no Open
 
 {
   slug: 'cdlconnect-pro',
-  title: 'CDLConnect Pro — Recruiter Analytics Dashboard',
+  title: 'CDLConnect Pro - Recruiter Analytics Dashboard',
   shortDescription:
-    'Contributed across the full stack of a production recruiter analytics platform — implementing role-based access control, god view dashboards, BigQuery-backed data pipelines, and post-launch stabilization across 168 commits.',
+    'Contributed across the full stack of a production recruiter analytics platform - implementing role-based access control, god view dashboards, BigQuery-backed data pipelines, and post-launch stabilization across 168 commits.',
   longDescription: `CDLConnect Pro is the analytics layer that recruiters and clients use to measure driver pipeline performance — a high-stakes dashboard where data accuracy and access control directly affect business decisions.
 
-My work spanned the full stack across two major release cycles. On the frontend, I built the god view dashboard and recruiter filter system in SvelteKit, giving clients cross-account visibility with scoped permissions. On the backend, I implemented role-based access control across API routes and hardened data pipeline reliability with retry logic and crash guards. Precomputed nightly pipelines replaced expensive on-demand BigQuery queries, reducing load and improving dashboard response times.
+My work spanned the full stack across two major release cycles. On the frontend, I helped build the god view dashboard and recruiter filter system in SvelteKit, giving our team cross-account visibility with scoped permissions. On the backend, I implemented role-based access control across API routes and hardened data pipeline reliability with retry logic and crash guards. Precomputed nightly pipelines replaced expensive on-demand BigQuery queries, reducing load and improving dashboard response times.
 
-Post-launch, I owned stabilization across 168 commits — the kind of sustained ownership that follows a major release when the real edge cases emerge. That included parallelizing key pipeline functions, reconfiguring CI/CD to unblock a deployment blocked by unrelated test script failures, and conducting security audits on new API routes. I also reviewed PRs exceeding 5,000 lines of changes, providing architectural guidance across frontend, backend, and data systems.`,
+Post-launch, I owned stabilization across 168 commits - the kind of sustained ownership that follows a major release when the real edge cases emerge. That included parallelizing key pipeline functions, reconfiguring CI/CD to unblock a deployment blocked by unrelated test script failures, and conducting security audits on new API routes. I also reviewed PRs exceeding 5,000 lines of changes, providing architectural guidance across frontend, backend, and data systems.`,
   techStack: ['SvelteKit', 'TypeScript', 'BigQuery', 'Node.js', 'MongoDB'],
   imgSrc: '/images/cdlconnect-pro.png',
   images: [],

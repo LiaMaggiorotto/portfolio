@@ -1,6 +1,6 @@
 <section
   id="contact"
-  class="w-full py-[7rem] px-[4rem] bg-espresso-martini flex flex-col items-center text-center"
+  class="w-full py-[4rem] px-[1.5rem] md:py-[7rem] md:px-[4rem] bg-espresso-martini flex flex-col items-center text-center"
 >
   <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee mb-[16px]">Contact</p>
 
