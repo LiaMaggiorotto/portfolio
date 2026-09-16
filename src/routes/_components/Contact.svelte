@@ -10,7 +10,7 @@
 
   <div class="w-[40px] h-[1px] bg-creme-brulee mb-[28px]"></div>
 
-  <p class="text-coconut-flour text-[14px] leading-relaxed max-w-[480px] opacity-70 mb-[48px]">
+  <p class="text-coconut-flour text-[14px] leading-relaxed max-w-[480px] opacity-70 mb-[48px] md:mb-[64px]">
     I'm open to full-time roles, contract work, and collaborative projects. If you're building
     something meaningful, I'd love to hear about it.
   </p>

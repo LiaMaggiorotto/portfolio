@@ -11,7 +11,7 @@
 
 <a
   href="/projects/{slug}"
-  class="PortfolioItem group flex flex-col bg-coconut-flour rounded-[4px] overflow-hidden shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl no-underline"
+  class="PortfolioItem group flex flex-col h-full bg-coconut-flour rounded-[4px] overflow-hidden shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl no-underline"
 >
   <!-- Image -->
   <div class="w-full h-[220px] bg-dark-chocolate overflow-hidden">
@@ -48,11 +48,13 @@
       {title}
     </h3>
 
-    <p class="text-[13px] text-espresso-martini leading-relaxed line-clamp-3">
-      {shortDescription}
-    </p>
+    <div class="flex-1 flex items-center">
+      <p class="text-[13px] text-espresso-martini leading-relaxed">
+        {shortDescription}
+      </p>
+    </div>
 
-    <div class="mt-auto pt-[12px]">
+    <div class="pt-[12px]">
       <span class="text-[12px] uppercase tracking-widest text-creme-brulee group-hover:text-mocha-latte transition-colors duration-200">
         View Project →
       </span>
