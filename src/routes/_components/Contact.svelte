@@ -4,13 +4,13 @@
 >
   <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee mb-[16px]">Contact</p>
 
-  <h2 class="font-[fraunces] text-5xl text-coconut-flour leading-tight mb-[20px]">
+  <h2 class="font-[fraunces] text-[1.6rem] md:text-5xl text-coconut-flour leading-tight mb-[20px]">
     Let's work <em class="italic font-light">together.</em>
   </h2>
 
   <div class="w-[40px] h-[1px] bg-creme-brulee mb-[28px]"></div>
 
-  <p class="text-coconut-flour text-[14px] leading-relaxed max-w-[480px] opacity-70 mb-[48px] md:mb-[64px]">
+  <p class="text-coconut-flour text-[14px] leading-relaxed max-w-[480px] opacity-70 mb-[56px] md:mb-[64px]">
     I'm open to full-time roles, contract work, and collaborative projects. If you're building
     something meaningful, I'd love to hear about it.
   </p>
@@ -18,7 +18,7 @@
   <!-- Email -->
   <a
     href="mailto:liamaggiorotto@gmail.com"
-    class="font-[fraunces] text-2xl text-coconut-flour hover:text-creme-brulee transition-colors duration-300 mb-[48px]"
+    class="font-[fraunces] text-lg md:text-2xl text-coconut-flour hover:text-creme-brulee transition-colors duration-300 mb-[48px] break-all md:break-normal px-[1rem] md:px-0"
   >
     liamaggiorotto@gmail.com
   </a>

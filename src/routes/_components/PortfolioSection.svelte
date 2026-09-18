@@ -10,7 +10,7 @@
   <!-- Section header -->
   <div class="w-full max-w-5xl flex flex-col items-center text-center mb-[2.5rem] md:mb-[4rem] px-[1.5rem] md:px-0">
     <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee mb-[16px]">Work</p>
-    <h2 class="font-[fraunces] text-4xl md:text-5xl text-coconut-flour leading-tight">
+    <h2 class="font-[fraunces] text-[1.6rem] md:text-5xl text-coconut-flour leading-tight">
       Featured <em class="italic font-light">Projects</em>
     </h2>
     <div class="w-[40px] h-[1px] bg-creme-brulee mt-[20px]"></div>

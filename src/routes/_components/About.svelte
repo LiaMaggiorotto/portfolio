@@ -1,3 +1,9 @@
+<script>
+  const openResume = () => {
+    window.open("/resume.pdf", "_blank");
+  };
+</script>
+
 <section
   id="about"
   class="About flex flex-col md:flex-row gap-[32px] md:gap-[60px] py-[3rem] px-[1.5rem] md:py-[6rem] md:px-[5rem] bg-coconut-flour"
@@ -15,7 +21,7 @@
   <div class="About-text w-full md:w-[55%] flex flex-col justify-center gap-[24px]">
     <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee">About</p>
 
-    <h2 class="font-[fraunces] text-4xl leading-tight">
+    <h2 class="font-[fraunces] text-[1.6rem] md:text-4xl leading-tight">
       What Makes Me <em class="italic font-light">Different</em>
     </h2>
 
@@ -37,5 +43,11 @@
       It's not just what I build.<br />
       It's how I build - with curiosity, care, and collaboration.
     </p>
+
+    <div id="resume" class="pt-2">
+      <button on:click={openResume} class="button-standard">
+        View Resume
+      </button>
+    </div>
   </div>
 </section>

@@ -20,7 +20,7 @@
     </p>
 
     <h1
-      class="text-5xl md:text-6xl lg:text-7xl font-[fraunces] text-coconut-flour leading-[1.1] w-[80%] max-w-[900px] drop-shadow-md"
+      class="text-[2rem] md:text-6xl lg:text-7xl font-[fraunces] text-coconut-flour leading-[1.1] w-[80%] max-w-[900px] drop-shadow-md"
     >
       Bringing <em class="not-italic italic font-light">strategic insight,</em><br />
       human connection,<br />

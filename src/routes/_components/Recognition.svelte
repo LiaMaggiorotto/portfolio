@@ -1,12 +1,10 @@
 <script>
-  import { fade } from "svelte/transition";
-
   const quotes = [
     {
-      text: "I'm honored to be nominating Lia for representing these values. Lia consistently demonstrates exceptional teamwork, working seamlessly with colleagues to ensure that goals are met efficiently. Her ability to collaborate effectively fosters a culture of support and shared success, encouraging those around her to achieve their best.\n\nLia is always seeking out new ideas and approaches, tying her curiosity to practical solutions that benefit the team and organization as a whole.\n\nFurthermore, Lia embodies fairness and respect in all her interactions. By advocating for inclusivity and demonstrating integrity, she creates an environment where every team member feels valued and empowered.",
+      text: "I worked with Lia on the CDLLife Student website launch, and her organization, attention to detail, and dedication truly stood out throughout the entire project. She took ownership of the initiative and did a great job managing expectations along the way. Her impact on getting it launched is immeasurable. It's people like Lia who make working at CDLLife such a great experience.",
       name: "Anonymous",
       title: "Peer Nomination",
-      context: "Employee of the Month · CDLLife · January 2025",
+      context: "Employee of the Month · CDLLife · May 2026",
     },
     {
       text: "Lia consistently fosters a culture of support and shared success. She creates an environment where every team member feels valued and empowered. In addition to her collaborative leadership, Lia actively seeks out solutions that benefit not only our team but the organization as a whole. Her forward-thinking mindset and dedication to continuous improvement inspire those around her to do their best work.\n\nShe is a true team MVP in every sense.",
@@ -21,10 +19,10 @@
       context: "Employee of the Month · CDLLife · May 2025",
     },
     {
-      text: "I worked with Lia on the CDLLife Student website launch, and her organization, attention to detail, and dedication truly stood out throughout the entire project. She took ownership of the initiative and did a great job managing expectations along the way. Her impact on getting it launched is immeasurable. It's people like Lia who make working at CDLLife such a great experience.",
+      text: "I'm honored to be nominating Lia for representing these values. Lia consistently demonstrates exceptional teamwork, working seamlessly with colleagues to ensure that goals are met efficiently. Her ability to collaborate effectively fosters a culture of support and shared success, encouraging those around her to achieve their best.\n\nLia is always seeking out new ideas and approaches, tying her curiosity to practical solutions that benefit the team and organization as a whole.\n\nFurthermore, Lia embodies fairness and respect in all her interactions. By advocating for inclusivity and demonstrating integrity, she creates an environment where every team member feels valued and empowered.",
       name: "Anonymous",
       title: "Peer Nomination",
-      context: "Employee of the Month · CDLLife · May 2026",
+      context: "Employee of the Month · CDLLife · January 2025",
     },
     {
       text: "It's a rare opportunity to report to a manager who is both professional and extremely personable. A phrase that comes to mind when I think of her management style is \"straight-forward and honest with a smile\". I'm always impressed by Lia's ability to handle discontented residents with ease and communicate policies with empathy. Any company would be lucky to have her.",
@@ -56,7 +54,7 @@
   <!-- Header -->
   <div class="max-w-2xl mx-auto flex flex-col items-center text-center mb-[1.5rem] md:mb-[2rem]">
     <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee mb-[16px]">Recognition</p>
-    <h2 class="font-[fraunces] text-4xl md:text-5xl text-dark-chocolate leading-tight">
+    <h2 class="font-[fraunces] text-[1.6rem] md:text-5xl text-dark-chocolate leading-tight">
       What <em class="italic font-light">people say.</em>
     </h2>
     <div class="w-[40px] h-[1px] bg-creme-brulee mt-[20px]"></div>
@@ -84,13 +82,16 @@
       </svg>
     </button>
 
-    <div class="px-[44px] md:px-[64px] min-h-[220px] flex items-center justify-center">
-      {#key current}
-        <div in:fade={{ duration: 250 }} class="flex flex-col items-center text-center gap-[20px]">
+    <div class="Recognition-quote-grid grid items-center px-[44px] md:px-[64px]">
+      {#each quotes as quote, i}
+        <div
+          class="Recognition-quote-slide flex flex-col items-center text-center gap-[20px] transition-opacity duration-300 {i === current ? 'opacity-100' : 'opacity-0 pointer-events-none'}"
+          aria-hidden={i !== current}
+        >
           <div class="flex flex-col items-center gap-[6px]">
             <span class="font-[fraunces] text-[36px] text-creme-brulee leading-none select-none">"</span>
             <div class="flex flex-col gap-[10px]">
-              {#each quotes[current].text.split("\n\n") as paragraph}
+              {#each quote.text.split("\n\n") as paragraph}
                 <p class="font-[fraunces] italic text-[18px] md:text-[22px] text-espresso-martini leading-relaxed">
                   {paragraph}
                 </p>
@@ -98,12 +99,12 @@
             </div>
           </div>
           <div>
-            <p class="font-semibold text-dark-chocolate text-[13px]">{quotes[current].name}</p>
-            <p class="text-[12px] text-mocha-latte">{quotes[current].title}</p>
-            <p class="text-[11px] uppercase tracking-widest text-creme-brulee mt-[4px]">{quotes[current].context}</p>
+            <p class="font-semibold text-dark-chocolate text-[13px]">{quote.name}</p>
+            <p class="text-[12px] text-mocha-latte">{quote.title}</p>
+            <p class="text-[11px] uppercase tracking-widest text-creme-brulee mt-[4px]">{quote.context}</p>
           </div>
         </div>
-      {/key}
+      {/each}
     </div>
   </div>
 
@@ -118,3 +119,12 @@
     {/each}
   </div>
 </section>
+
+<style>
+  /* Every slide occupies the same grid cell, so the container's height is
+     always the tallest quote — switching quotes never resizes the section
+     or shifts the arrows/dots below it. */
+  .Recognition-quote-grid > .Recognition-quote-slide {
+    grid-area: 1 / 1;
+  }
+</style>

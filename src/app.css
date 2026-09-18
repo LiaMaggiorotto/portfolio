@@ -1,205 +1,232 @@
 /* app.css */
 
 /* Tailwind's directives */
+@layer theme, base, utilities;
+
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 
-/* Custom global styles and CSS variables */
-:root {
-  --font-fraunces: "Fraunces", serif;
-  --font-fira: "Fira Mono", monospace;
-  --color-whipped-cream: #f5f3ee;
-  --color-coconut-flour: #dad5ca;
-  --color-creme-brulee: #a1846e;
-  --color-mocha-latte: #5b4338;
-  --color-espresso-martini: #352620;
-  --color-dark-chocolate: #161513;
-  --color-olive-branch: #575242;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Global body styles */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  min-height: 100vh;
-  margin: 0;
-  /* background-attachment: fixed; */
-  background-color: var(--color-coconut-flour);
-  background-size: cover;
-  color: var(--color-espresso-martini);
-  font-family: var(--font-fira);
-}
-
-/* Typographic styles */
-h1,
-h2,
-p,
-a {
-  margin: 0px;
-}
-
-p {
-  line-height: 1.5;
-}
-
-a {
-  text-decoration: none;
-  color: var(--color-espresso-martini);
-}
-
-a:hover {
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--color-dark-chocolate);
-  font-weight: bold;
-}
-
-h1 {
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-input,
-button {
-  font-size: inherit;
-  font-family: inherit;
-}
-
-button.button-text {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-button.button-standard {
-  border: none;
-  background-color: var(--color-espresso-martini);
-  color: var(--color-whipped-cream);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition: background-color 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-button.button-standard:hover {
-  background-color: var(--color-mocha-latte);
-}
-
-button.button-light {
-  border: none;
-  background-color: var(--color-whipped-cream);
-  color: var(--color-espresso-martini);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition: background-color 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-button.button-light:hover {
-  background-color: var(--color-coconut-flour);
-}
-
-button:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.text-whipped-cream {
-  color: var(--color-whipped-cream);
-}
-
-.bg-whipped-cream {
-  background-color: var(--color-whipped-cream);
-}
-
-.text-coconut-flour {
-  color: var(--color-coconut-flour);
-}
-
-.bg-coconut-flour {
-  background-color: var(--color-coconut-flour);
-}
-
-.text-creme-brulee {
-  color: var(--color-creme-brulee);
-}
-
-.bg-creme-brulee {
-  background-color: var(--color-creme-brulee);
-}
-
-.text-mocha-latte {
-  color: var(--color-mocha-latte);
-}
-
-.bg-mocha-latte {
-  background-color: var(--color-mocha-latte);
-}
-
-.text-espresso-martini {
-  color: var(--color-espresso-martini);
-}
-
-.bg-espresso-martini {
-  background-color: var(--color-espresso-martini);
-}
-
-.text-dark-chocolate {
-  color: var(--color-dark-chocolate);
-}
-
-.bg-dark-chocolate {
-  background-color: var(--color-dark-chocolate);
-}
-
-.text-olive-branch {
-  color: var(--color-olive-branch);
-}
-
-.bg-olive-branch {
-  background-color: var(--color-olive-branch);
-}
-
-.font-fraunces {
-  font-family: var(--font-fraunces);
-}
-
-.font-fira {
-  font-family: var(--font-fira);
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+/* Custom base styles live in their own layer, below "utilities", so that any
+   Tailwind utility class always wins over these defaults (matching how
+   Tailwind's own preflight is layered — we just hand-roll ours instead of
+   importing preflight.css, since it's more aggressive than we want). */
+@layer base {
+  :root {
+    --font-fraunces: "Fraunces", serif;
+    --font-fira: "Fira Mono", monospace;
+    --color-whipped-cream: #f5f3ee;
+    --color-coconut-flour: #dad5ca;
+    --color-creme-brulee: #a1846e;
+    --color-mocha-latte: #5b4338;
+    --color-espresso-martini: #352620;
+    --color-dark-chocolate: #161513;
+    --color-olive-branch: #575242;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
-}
 
-.animate-fade-in {
-  animation: fade-in 1s ease-out forwards;
-}
+  /* Global body styles */
+  html {
+    scroll-behavior: smooth;
+  }
 
-/* Responsive typography */
-@media (min-width: 720px) {
+  /* Offsets anchor-scrolled sections so the sticky nav doesn't cover their heading */
+  #about,
+  #resume,
+  #portfolio,
+  #recognition,
+  #contact {
+    scroll-margin-top: 88px;
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    /* background-attachment: fixed; */
+    background-color: var(--color-coconut-flour);
+    background-size: cover;
+    color: var(--color-espresso-martini);
+    font-family: var(--font-fira);
+  }
+
+  /* Typographic styles */
+  h1,
+  h2,
+  p,
+  a {
+    margin: 0px;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-espresso-martini);
+  }
+
+  a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-dark-chocolate);
+    font-weight: bold;
+  }
+
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  input,
+  button {
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  button.button-text {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  button.button-standard {
+    border: none;
+    background-color: var(--color-espresso-martini);
+    color: var(--color-whipped-cream);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  button.button-standard:hover {
+    background-color: var(--color-mocha-latte);
+  }
+
+  button.button-light {
+    border: none;
+    background-color: var(--color-whipped-cream);
+    color: var(--color-espresso-martini);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  button.button-light:hover {
+    background-color: var(--color-coconut-flour);
+  }
+
+  button:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .text-whipped-cream {
+    color: var(--color-whipped-cream);
+  }
+
+  .bg-whipped-cream {
+    background-color: var(--color-whipped-cream);
+  }
+
+  .text-coconut-flour {
+    color: var(--color-coconut-flour);
+  }
+
+  .bg-coconut-flour {
+    background-color: var(--color-coconut-flour);
+  }
+
+  .text-creme-brulee {
+    color: var(--color-creme-brulee);
+  }
+
+  .bg-creme-brulee {
+    background-color: var(--color-creme-brulee);
+  }
+
+  .text-mocha-latte {
+    color: var(--color-mocha-latte);
+  }
+
+  .bg-mocha-latte {
+    background-color: var(--color-mocha-latte);
+  }
+
+  .text-espresso-martini {
+    color: var(--color-espresso-martini);
+  }
+
+  .bg-espresso-martini {
+    background-color: var(--color-espresso-martini);
+  }
+
+  .text-dark-chocolate {
+    color: var(--color-dark-chocolate);
+  }
+
+  .bg-dark-chocolate {
+    background-color: var(--color-dark-chocolate);
+  }
+
+  .text-olive-branch {
+    color: var(--color-olive-branch);
+  }
+
+  .bg-olive-branch {
+    background-color: var(--color-olive-branch);
+  }
+
+  .font-fraunces {
+    font-family: var(--font-fraunces);
+  }
+
+  .font-fira {
+    font-family: var(--font-fira);
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+
+  /* Responsive typography */
+  @media (min-width: 720px) {
+    h1 {
+      font-size: 2.4rem;
+    }
   }
 }

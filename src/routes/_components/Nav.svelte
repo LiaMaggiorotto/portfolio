@@ -10,7 +10,12 @@
   }
 
   function closeMenu() {
-    menuOpen = false;
+    // Deferred so the anchor's default hash-navigation (and scroll) runs
+    // before the mobile menu unmounts — closing synchronously here was
+    // silently cancelling the scroll on some browsers.
+    setTimeout(() => {
+      menuOpen = false;
+    }, 0);
   }
 </script>
 
