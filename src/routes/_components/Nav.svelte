@@ -33,7 +33,7 @@
   <!-- Desktop links -->
   <div class="hidden md:flex gap-[32px]">
     <a href="#about" class="Nav-link text-[13px] uppercase tracking-widest">About</a>
-    <a href="#resume" class="Nav-link text-[13px] uppercase tracking-widest">Resume</a>
+    <a href="/resume.pdf" target="_blank" rel="noopener" class="Nav-link text-[13px] uppercase tracking-widest">Resume</a>
     <a href="#portfolio" class="Nav-link text-[13px] uppercase tracking-widest">Portfolio</a>
     <a href="#recognition" class="Nav-link text-[13px] uppercase tracking-widest">Recognition</a>
     <a href="#contact" class="Nav-link text-[13px] uppercase tracking-widest">Contact</a>
@@ -57,7 +57,7 @@
     class="Nav-mobile-menu md:hidden fixed top-[70px] left-0 right-0 flex flex-col bg-whipped-cream border-b border-coconut-flour z-[99]"
   >
     <a href="#about" on:click={closeMenu} class="Nav-link Nav-link--mobile text-[13px] uppercase tracking-widest px-[1.25rem] py-[16px]">About</a>
-    <a href="#resume" on:click={closeMenu} class="Nav-link Nav-link--mobile text-[13px] uppercase tracking-widest px-[1.25rem] py-[16px]">Resume</a>
+    <a href="/resume.pdf" target="_blank" rel="noopener" on:click={closeMenu} class="Nav-link Nav-link--mobile text-[13px] uppercase tracking-widest px-[1.25rem] py-[16px]">Resume</a>
     <a href="#portfolio" on:click={closeMenu} class="Nav-link Nav-link--mobile text-[13px] uppercase tracking-widest px-[1.25rem] py-[16px]">Portfolio</a>
     <a href="#recognition" on:click={closeMenu} class="Nav-link Nav-link--mobile text-[13px] uppercase tracking-widest px-[1.25rem] py-[16px]">Recognition</a>
     <a href="#contact" on:click={closeMenu} class="Nav-link Nav-link--mobile text-[13px] uppercase tracking-widest px-[1.25rem] py-[16px]">Contact</a>
