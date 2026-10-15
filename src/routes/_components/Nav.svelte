@@ -1,5 +1,6 @@
 <script>
   import { goto } from "$app/navigation";
+  import { slide } from "svelte/transition";
 
   let menuOpen = false;
 
@@ -52,8 +53,8 @@
 </nav>
 
 {#if menuOpen}
-  <div
-    class="Nav-mobile-menu md:hidden fixed top-[65px] left-0 right-0 flex flex-col bg-whipped-cream border-b border-coconut-flour z-[99]"
+  <div transition:slide
+    class="Nav-mobile-menu md:hidden fixed top-[70px] left-0 right-0 flex flex-col bg-whipped-cream border-b border-coconut-flour z-[99]"
   >
     <a href="#about" on:click={closeMenu} class="Nav-link Nav-link--mobile text-[13px] uppercase tracking-widest px-[1.25rem] py-[16px]">About</a>
     <a href="#resume" on:click={closeMenu} class="Nav-link Nav-link--mobile text-[13px] uppercase tracking-widest px-[1.25rem] py-[16px]">Resume</a>
