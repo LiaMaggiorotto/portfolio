@@ -61,7 +61,7 @@ My work spanned the full stack across two major release cycles. On the frontend,
 
 Post-launch, I owned stabilization across 168 commits - the kind of sustained ownership that follows a major release when the real edge cases emerge. That included parallelizing key pipeline functions, reconfiguring CI/CD to unblock a deployment blocked by unrelated test script failures, and conducting security audits on new API routes. I also reviewed PRs exceeding 5,000 lines of changes, providing architectural guidance across frontend, backend, and data systems.`,
   techStack: ['SvelteKit', 'TypeScript', 'BigQuery', 'Node.js', 'MongoDB'],
-  imgSrc: '/images/cdlconnect-pro.png',
+  imgSrc: '/images/cdlconnect_pro.png',
   images: [],
   liveUrl: 'https://pro.cdlconnect.io',
   githubUrl: null,

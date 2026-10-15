@@ -1,38 +1,75 @@
-# sv
+# Portfolio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Personal portfolio for Lia Maggiorotto, a full-stack software engineer and tech lead based in Kansas City. The site covers background, how I work, selected projects, and recognition from teammates.
 
-## Creating a project
+Built with SvelteKit (Svelte 5), Tailwind CSS v4, and Vite. JavaScript only, no TypeScript.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Getting started
 
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Requires Node 20.11.1 (see `.nvmrc`). `.npmrc` sets `engine-strict=true`, so installs fail on a mismatched Node version.
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+nvm use
+npm install
+npm run dev        # dev server at http://localhost:5173
+npm run build      # production build
+npm run preview    # serve the production build locally
 ```
 
-## Building
+## Structure
 
-To create a production version of your app:
-
-```bash
-npm run build
+```
+src/
+  app.css                     Tailwind setup, color tokens, fonts, shared classes
+  app.html                    Document shell, Google Fonts links
+  lib/
+    projects.js               All project data (single source of truth)
+    images/                   Imported assets (icons)
+  routes/
+    +layout.svelte            Page frame
+    +page.svelte              Home page, composes the sections below
+    +page.js                  prerender = true
+    _components/
+      Nav, Header, About, PortfolioSection, PortfolioItem,
+      Recognition, Contact
+    projects/[slug]/
+      +page.js                Looks up a project by slug, 404s if missing
+      +page.svelte            Project detail page
+static/
+  images/                     Hero, headshot, project images and diagrams
+  resume.pdf
 ```
 
-You can preview the production build with `npm run preview`.
+Home page order: Nav, Header, About, Portfolio, Recognition, Contact.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Adding or editing a project
+
+Everything lives in `src/lib/projects.js`. Each entry has:
+
+| Field | Notes |
+| --- | --- |
+| `slug` | URL segment, becomes `/projects/<slug>` |
+| `title`, `shortDescription` | Shown on the card |
+| `longDescription` | Shown on the detail page, blank lines become paragraphs |
+| `techStack` | Array of strings |
+| `imgSrc` | Path under `static/`, for example `/images/foo.png` |
+| `liveUrl`, `githubUrl` | Optional, use `null` to hide the link |
+
+Cards and detail pages fall back gracefully if an image path fails to load, but the image should exist before you ship.
+
+## Design tokens
+
+Defined in `src/app.css` and exposed as Tailwind utilities.
+
+| Token | Hex |
+| --- | --- |
+| whipped-cream | `#f5f3ee` |
+| coconut-flour | `#dad5ca` |
+| creme-brulee | `#a1846e` |
+| mocha-latte | `#5b4338` |
+| espresso-martini | `#352620` |
+| dark-chocolate | `#161513` |
+| olive-branch | `#575242` |
+
+Fonts: Fraunces for headings, Fira Mono for body text. Button classes: `button-standard`, `button-light`, `button-text`.
+

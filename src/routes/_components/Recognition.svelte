@@ -19,7 +19,7 @@
       context: "Employee of the Month · CDLLife · May 2025",
     },
     {
-      text: "I'm honored to be nominating Lia for representing these values. Lia consistently demonstrates exceptional teamwork, working seamlessly with colleagues to ensure that goals are met efficiently. Her ability to collaborate effectively fosters a culture of support and shared success, encouraging those around her to achieve their best.\n\nLia is always seeking out new ideas and approaches, tying her curiosity to practical solutions that benefit the team and organization as a whole.\n\nFurthermore, Lia embodies fairness and respect in all her interactions. By advocating for inclusivity and demonstrating integrity, she creates an environment where every team member feels valued and empowered.",
+      text: "Lia consistently demonstrates exceptional teamwork, working seamlessly with colleagues to ensure that goals are met efficiently. Her ability to collaborate effectively fosters a culture of support and shared success, encouraging those around her to achieve their best.\n\nLia is always seeking out new ideas and approaches, tying her curiosity to practical solutions that benefit the team and organization as a whole.\n\nFurthermore, Lia embodies fairness and respect in all her interactions. By advocating for inclusivity and demonstrating integrity, she creates an environment where every team member feels valued and empowered.",
       name: "Anonymous",
       title: "Peer Nomination",
       context: "Employee of the Month · CDLLife · January 2025",
@@ -52,7 +52,7 @@
   class="w-full py-[3rem] px-[1.5rem] md:py-[6rem] md:px-[4rem] bg-whipped-cream"
 >
   <!-- Header -->
-  <div class="max-w-2xl mx-auto flex flex-col items-center text-center mb-[1.5rem] md:mb-[2rem]">
+  <div class="max-w-2xl mx-auto flex flex-col items-center text-center mb-[1rem]">
     <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee mb-[16px]">Recognition</p>
     <h2 class="font-[fraunces] text-[1.6rem] md:text-5xl text-dark-chocolate leading-tight">
       What <em class="italic font-light">people say.</em>

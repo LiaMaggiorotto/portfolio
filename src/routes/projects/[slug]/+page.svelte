@@ -22,7 +22,7 @@
 </header>
 
 <!-- Hero image -->
-<div class="w-full h-[420px] bg-dark-chocolate overflow-hidden">
+<div class="w-full h-auto md:h-[420px] bg-dark-chocolate overflow-hidden">
   {#if project.imgSrc && !heroError}
     <img
       src={project.imgSrc}
