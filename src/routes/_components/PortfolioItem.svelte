@@ -20,7 +20,7 @@
       <img
         src={imgSrc}
         alt={imgAlt}
-        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        class="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105"
         on:error={() => (imgError = true)}
       />
     {:else}

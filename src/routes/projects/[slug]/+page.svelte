@@ -27,7 +27,7 @@
     <img
       src={project.imgSrc}
       alt={project.title}
-      class="w-full h-full object-cover opacity-90"
+      class="w-full h-full object-contain opacity-90"
       on:error={() => (heroError = true)}
     />
   {:else}
