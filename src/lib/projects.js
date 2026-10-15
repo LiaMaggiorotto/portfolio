@@ -89,12 +89,16 @@ The result: Lighthouse 100 on performance, the vendor contract eliminated, and m
   title: 'Cosmic Flow - Mobile App Platform',
   status: 'In development',
   shortDescription:
-    'Building a mobile-first consumer product end to end: a React Native app, an Express API on MongoDB and Redis, and a Next.js admin, all in one monorepo with shared design tokens and a custom icon library. Phone and SMS sign-in runs behind a swappable provider interface, and sensitive profile data is encrypted at rest.',
-  longDescription: `I'm building Cosmic Flow from scratch as a way to practice the parts of system design that interview questions only describe. The repo holds three apps and two shared packages, so the mobile app and the admin pull colors, type and icons from one source.
+    'A mobile app I\'m building to learn system design by doing it, one layer at a time. React Native client, Express API on MongoDB and Redis, a Next.js admin, and a shared design system, all in one TypeScript monorepo.',
+  longDescription: `I started Cosmic Flow to get better at system design, and I wanted to learn it by building something real instead of whiteboarding hypotheticals. The goal is to go deep on every layer, including the ones I haven't touched at work. It's also the project where the creative side is entirely mine, from the brand to the interface to the product, and that's a big part of why I love it.
 
-Auth is the part I'm most deliberate about. SMS login sits behind an AuthProvider interface so the provider can change without touching the routes, and the unit tests I wrote for it caught two bugs before anything shipped. Profile fields that identify a person are encrypted at rest, and the API is rate limited with a dev-only bypass for test accounts.
+The system design came first. I worked through requirements, entities, API, storage and architecture before writing code, which left me with seven entities to model. Five live in MongoDB. The other two are derived, so they live only in Redis with TTLs and are cheap to lose. Mongo is a hard dependency at boot and Redis is not, so a cache outage degrades those routes instead of taking the API down.
 
-I also write the handoff specs for design: which screens exist, what each must contain, which backend work a screen depends on, and what is cut from v1 and why. Holding scope to a working first version has been the hardest and most useful discipline on this project.`,
+Auth and security got the same attention. Phone and SMS login sits behind an AuthProvider interface, so I can swap providers without touching the routes. Sensitive profile fields are encrypted at rest and the API is rate limited. I wrote tests for each of those pieces, plus token handling and error handling, and the auth suite turned up two bugs I fixed right away.
+
+On the front end, the mobile app and the admin share one design token package and one icon library, so a change to a color or an icon lands in one place.
+
+It's still in development, and I'm keeping v1 to a working core on purpose. Finishing a smaller thing teaches me more than half-building a bigger one.`,
   techStack: ['React Native', 'Expo', 'TypeScript', 'Express', 'MongoDB', 'Redis', 'Next.js', 'shadcn/ui'],
   imgSrc: '/images/cosmic-flow.jpg',
   images: [],
