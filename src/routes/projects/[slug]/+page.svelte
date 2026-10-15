@@ -56,6 +56,12 @@
     {project.title}
   </h1>
 
+  {#if project.status}
+    <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee mb-[20px]">
+      {project.status}
+    </p>
+  {/if}
+
   <div class="w-[40px] h-[1px] bg-creme-brulee mb-[40px]"></div>
 
   <!-- Long description -->

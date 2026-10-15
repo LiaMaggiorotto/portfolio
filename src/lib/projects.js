@@ -83,6 +83,24 @@ The result: Lighthouse 100 on performance, the vendor contract eliminated, and m
   liveUrl: 'https://cdllife.com/jobslist',
   githubUrl: null,
 },
+
+{
+  slug: 'cosmic-flow',
+  title: 'Cosmic Flow - Mobile App Platform',
+  status: 'In development',
+  shortDescription:
+    'Building a mobile-first consumer product end to end: a React Native app, an Express API on MongoDB and Redis, and a Next.js admin, all in one monorepo with shared design tokens and a custom icon library. Phone and SMS sign-in runs behind a swappable provider interface, and sensitive profile data is encrypted at rest.',
+  longDescription: `I'm building Cosmic Flow from scratch as a way to practice the parts of system design that interview questions only describe. The repo holds three apps and two shared packages, so the mobile app and the admin pull colors, type and icons from one source.
+
+Auth is the part I'm most deliberate about. SMS login sits behind an AuthProvider interface so the provider can change without touching the routes, and the unit tests I wrote for it caught two bugs before anything shipped. Profile fields that identify a person are encrypted at rest, and the API is rate limited with a dev-only bypass for test accounts.
+
+I also write the handoff specs for design: which screens exist, what each must contain, which backend work a screen depends on, and what is cut from v1 and why. Holding scope to a working first version has been the hardest and most useful discipline on this project.`,
+  techStack: ['React Native', 'Expo', 'TypeScript', 'Express', 'MongoDB', 'Redis', 'Next.js', 'shadcn/ui'],
+  imgSrc: '/images/cosmic-flow.jpg',
+  images: [],
+  liveUrl: null,
+  githubUrl: null,
+},
 ];
 
 export function getProject(slug) {

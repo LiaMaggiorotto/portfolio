@@ -35,6 +35,7 @@
           imgAlt={project.title}
           techStack={project.techStack}
           slug={project.slug}
+          status={project.status}
         />
       </div>
     {/each}

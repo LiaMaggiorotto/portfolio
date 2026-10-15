@@ -5,6 +5,7 @@
   export let imgAlt = "";
   export let techStack = [];
   export let slug = "";
+  export let status = "";
 
   let imgError = false;
 </script>
@@ -14,7 +15,7 @@
   class="PortfolioItem group flex flex-col h-full bg-coconut-flour rounded-[4px] overflow-hidden shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl no-underline"
 >
   <!-- Image -->
-  <div class="w-full h-[220px] bg-dark-chocolate overflow-hidden">
+  <div class="relative w-full h-[220px] bg-dark-chocolate overflow-hidden">
     {#if imgSrc && !imgError}
       <img
         src={imgSrc}
@@ -28,6 +29,13 @@
           {title[0]}
         </span>
       </div>
+    {/if}
+    {#if status}
+      <span
+        class="absolute top-[12px] left-[12px] text-[10px] uppercase tracking-widest px-[10px] py-[4px] rounded-full bg-whipped-cream text-espresso-martini"
+      >
+        {status}
+      </span>
     {/if}
   </div>
 
