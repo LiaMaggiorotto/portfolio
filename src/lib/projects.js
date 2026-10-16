@@ -17,17 +17,19 @@ The implementation shipped as a dark launch — routing logic running in the bac
 },
 
 {
-  slug: 'appadmin2-nextjs-rewrite',
-  title: 'Internal Mobile App Admin Panel - Ground-Up Next.js Rewrite',
+  slug: 'cdllife-copilot',
+  title: 'CDLLife Copilot - Driver Job Application Portal',
   shortDescription:
-    'Rewrote a legacy SvelteKit admin panel in Next.js 16 App Router in six days, delivering authentication, a proxy API gateway, full CRUD with file uploads, theming, and CI/CD from scratch.',
-  longDescription: `The existing internal admin panel had accumulated enough debt that a rewrite was faster than a refactor. I took full ownership: architecture decisions, framework selection, implementation, and deployment — all in six days.
+    'Took ownership of a SvelteKit 2 driver portal after more than a year in development, with two weeks to get it production ready. Hardened authentication, fixed a real verification security gap, and closed out the performance and UX work left before launch.',
+  longDescription: `The portal had been in development for over a year across a multi-service system, a mobile API, a job board, an SSO provider, and lead generation infrastructure, when I took ownership with a two-week window to ship it. The work was mostly stabilization: finding what was still broken across services that had been built somewhat independently of each other.
 
-The new system is built on Next.js 16 with the App Router, using iron-session for auth and a custom proxy API gateway to isolate internal service calls from the client. Deal Depot CRUD includes file upload handling, and the UI was built with theming support so it can adapt across internal tools without restyling from scratch. CI/CD was configured from zero alongside the build.
+The most important fix was a verification flaw. Phone numbers were being marked verified before the driver had actually confirmed the SMS code, so the system trusted a number nobody had proven they controlled. I re-architected the flow so verification status only updates after the code is confirmed. I also traced a race condition in the proxy layer, where a session token created mid-request wasn't available yet to the API calls that needed it, and fixed it with a cookie fallback.
 
-The constraint that made this interesting wasn't the feature set — it was the timeline. Six days meant every architectural decision had to be right the first time, with no room to backtrack on framework choices or data patterns mid-build. The panel has been in production use by internal teams since launch.`,
-  techStack: ['Next.js', 'React', 'TypeScript', 'iron-session', 'GitHub Actions', 'Shadcn UI'],
-  imgSrc: '/images/appadmin2.png',
+One fix removed a 24-hour onboarding delay entirely: an endpoint that should have linked a new driver's account immediately had been disabled, so the system was falling back to a nightly cron job to do the same thing a day later. Re-enabling it, correctly, meant new drivers no longer waited a full day to get into their own account.
+
+Past the backend work, I mapped how driver identity actually flows across three MongoDB collections (users, leads, and drivers) so the ownership model made sense end to end, then closed out the UX: pagination, filtering, modal transitions, empty states, and mobile navigation, the kind of polish a portal needs before real drivers depend on it.`,
+  techStack: ['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Node.js', 'MongoDB'],
+  imgSrc: '/images/cdllife-copilot.svg',
   images: [],
   liveUrl: null,
   githubUrl: null,
