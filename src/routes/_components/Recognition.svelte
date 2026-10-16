@@ -1,4 +1,6 @@
 <script>
+  import { onMount, onDestroy } from "svelte";
+
   const quotes = [
     {
       text: "I worked with Lia on the CDLLife Student website launch, and her organization, attention to detail, and dedication truly stood out throughout the entire project. She took ownership of the initiative and did a great job managing expectations along the way. Her impact on getting it launched is immeasurable. It's people like Lia who make working at CDLLife such a great experience.",
@@ -82,7 +84,7 @@
       </svg>
     </button>
 
-    <div class="Recognition-quote-grid grid items-center px-[44px] md:px-[64px]">
+    <div class="Recognition-quote-grid grid items-start px-[44px] md:px-[64px]">
       {#each quotes as quote, i}
         <div
           class="Recognition-quote-slide flex flex-col items-center text-center gap-[20px] transition-opacity duration-300 {i === current ? 'opacity-100' : 'opacity-0 pointer-events-none'}"
