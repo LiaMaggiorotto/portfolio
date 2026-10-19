@@ -153,12 +153,12 @@
 >
   <!-- Header -->
   <div class="max-w-2xl mx-auto flex flex-col items-center text-center mb-[2.5rem] md:mb-[3.5rem] px-[1.5rem]">
-    <p class="text-[11px] uppercase tracking-[0.3em] text-coconut-flour opacity-70 mb-[16px]">Skills</p>
+    <p class="text-[11px] uppercase tracking-[0.3em] text-coconut-flour opacity-90 mb-[16px]">Skills</p>
     <h2 class="font-[fraunces] text-[1.6rem] md:text-5xl text-whipped-cream leading-tight">
       Tools I <em class="italic font-light">reach for.</em>
     </h2>
     <div class="w-[40px] h-[1px] bg-coconut-flour opacity-40 mt-[20px]"></div>
-    <p class="text-coconut-flour text-[14px] leading-relaxed mt-[20px] max-w-[480px] opacity-70">
+    <p class="text-coconut-flour text-[14px] leading-relaxed mt-[20px] max-w-[480px] opacity-90">
       The languages, frameworks, and tools behind how I build, ship, and work.
     </p>
   </div>
@@ -169,13 +169,13 @@
       {#each skills as skill}
         <div class="Skills-chip flex flex-col items-center gap-[10px] w-[88px]">
           {#if skill.path}
-            <svg viewBox={skill.viewBox} class="w-[32px] h-[32px] text-coconut-flour" fill="currentColor">
+            <svg viewBox={skill.viewBox} aria-hidden="true" class="w-[32px] h-[32px] text-coconut-flour" fill="currentColor">
               <path d={skill.path} />
             </svg>
           {:else}
             <div class="w-[32px] h-[32px]"></div>
           {/if}
-          <span class="text-[10px] uppercase tracking-widest text-coconut-flour opacity-80 text-center leading-tight">
+          <span class="text-[10px] uppercase tracking-widest text-coconut-flour opacity-90 text-center leading-tight">
             {skill.label}
           </span>
         </div>
@@ -190,13 +190,13 @@
             {#each skills as skill}
               <div class="Skills-chip flex flex-col items-center gap-[10px] w-[120px] px-[16px] shrink-0">
                 {#if skill.path}
-                  <svg viewBox={skill.viewBox} class="w-[32px] h-[32px] text-coconut-flour transition-colors duration-200" fill="currentColor">
+                  <svg viewBox={skill.viewBox} aria-hidden="true" class="w-[32px] h-[32px] text-coconut-flour transition-colors duration-200" fill="currentColor">
                     <path d={skill.path} />
                   </svg>
                 {:else}
                   <div class="w-[32px] h-[32px]"></div>
                 {/if}
-                <span class="text-[10px] uppercase tracking-widest text-coconut-flour opacity-80 text-center leading-tight transition-colors duration-200">
+                <span class="text-[10px] uppercase tracking-widest text-coconut-flour opacity-90 text-center leading-tight transition-colors duration-200">
                   {skill.label}
                 </span>
               </div>

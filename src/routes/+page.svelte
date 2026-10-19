@@ -57,9 +57,11 @@
 </svelte:head>
 
 <Nav />
-<Header />
-<About />
-<Skills />
-<PortfolioSection />
-<Recognition />
-<Contact />
+<main id="main-content">
+  <Header />
+  <About />
+  <Skills />
+  <PortfolioSection />
+  <Recognition />
+  <Contact />
+</main>

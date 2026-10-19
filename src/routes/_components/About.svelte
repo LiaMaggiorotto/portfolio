@@ -19,7 +19,7 @@
 
   <!-- Text side -->
   <div class="About-text w-full md:w-[55%] flex flex-col justify-center gap-[24px]">
-    <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee">About</p>
+    <p class="text-[11px] uppercase tracking-[0.3em] text-mocha-latte">About</p>
 
     <h2 class="font-[fraunces] text-[1.6rem] md:text-4xl leading-tight">
       What Makes Me <em class="italic font-light">Different</em>
@@ -42,6 +42,10 @@
     <p class="text-mocha-latte leading-relaxed font-[fraunces] italic text-lg">
       It's not just what I build.<br />
       It's how I build - with curiosity, care, and collaboration.
+    </p>
+
+    <p class="text-espresso-martini leading-relaxed text-sm opacity-80">
+      I'm currently open to remote, full-stack engineering roles.
     </p>
 
     <div id="resume" class="pt-2">

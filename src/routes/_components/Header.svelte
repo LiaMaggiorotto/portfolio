@@ -1,12 +1,12 @@
 <script>
-  let subheading = "Full Stack Software Engineer · Kansas City · Open to Remote";
+  let subheading = "Full Stack Software Engineer · Kansas City";
   let small = "Let's build something meaningful.";
 </script>
 
 <section class="Header relative w-full h-[80vh] lg:h-[92vh]">
   <img
     src="/images/header.jpg"
-    alt="Computer and coffee"
+    alt=""
     class="absolute inset-0 w-full h-full object-cover object-bottom"
   />
 

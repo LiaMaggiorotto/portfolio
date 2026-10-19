@@ -37,14 +37,14 @@
   </a>
 </header>
 
-<section class="w-full flex flex-col items-center py-[3rem] px-[1.5rem] md:py-[5rem] md:px-[4rem] bg-espresso-martini">
+<main id="main-content" class="w-full flex flex-col items-center py-[3rem] px-[1.5rem] md:py-[5rem] md:px-[4rem] bg-espresso-martini">
   <div class="w-full max-w-5xl flex flex-col items-center text-center mb-[2.5rem] md:mb-[4rem]">
-    <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee mb-[16px]">Work</p>
-    <h2 class="font-[fraunces] text-[1.6rem] md:text-5xl text-coconut-flour leading-tight">
+    <p class="text-[11px] uppercase tracking-[0.3em] text-coconut-flour mb-[16px]">Work</p>
+    <h1 class="font-[fraunces] text-[1.6rem] md:text-5xl text-coconut-flour leading-tight">
       All <em class="italic font-light">Projects</em>
-    </h2>
+    </h1>
     <div class="w-[40px] h-[1px] bg-creme-brulee mt-[20px]"></div>
-    <p class="text-coconut-flour text-[14px] leading-relaxed mt-[20px] max-w-[520px] opacity-70">
+    <p class="text-coconut-flour text-[14px] leading-relaxed mt-[20px] max-w-[520px] opacity-90">
       Everything from flagship case studies to work still in progress.
     </p>
   </div>
@@ -62,4 +62,4 @@
       />
     {/each}
   </div>
-</section>
+</main>

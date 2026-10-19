@@ -11,7 +11,7 @@
 >
   <!-- Section header -->
   <div class="w-full max-w-5xl flex flex-col items-center text-center mb-[2.5rem] md:mb-[4rem] px-[1.5rem] md:px-0">
-    <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee mb-[16px]">Work</p>
+    <p class="text-[11px] uppercase tracking-[0.3em] text-coconut-flour mb-[16px]">Work</p>
     <h2 class="font-[fraunces] text-[1.6rem] md:text-5xl text-coconut-flour leading-tight">
       Featured <em class="italic font-light">Projects</em>
     </h2>
@@ -19,7 +19,7 @@
     <p class="text-coconut-flour text-[14px] leading-relaxed mt-[20px] max-w-[520px] opacity-70">
       Work that blends product thinking, technical execution, and developer experience.
     </p>
-    <p class="md:hidden text-creme-brulee text-[11px] uppercase tracking-widest mt-[16px] opacity-70">
+    <p class="md:hidden text-coconut-flour text-[11px] uppercase tracking-widest mt-[16px] opacity-70">
       Swipe to explore →
     </p>
   </div>
@@ -45,7 +45,7 @@
 
   <a
     href="/projects"
-    class="mt-[2.5rem] md:mt-[3.5rem] text-[12px] uppercase tracking-widest text-creme-brulee hover:text-coconut-flour transition-colors duration-200"
+    class="mt-[2.5rem] md:mt-[3.5rem] text-[12px] uppercase tracking-widest text-coconut-flour hover:text-whipped-cream transition-colors duration-200"
   >
     View All Projects →
   </a>

@@ -25,7 +25,7 @@
       />
     {:else}
       <div class="w-full h-full flex items-center justify-center opacity-20">
-        <span class="font-[fraunces] text-coconut-flour text-5xl italic">
+        <span aria-hidden="true" class="font-[fraunces] text-coconut-flour text-5xl italic">
           {title[0]}
         </span>
       </div>
@@ -63,7 +63,7 @@
     </div>
 
     <div class="pt-[12px]">
-      <span class="text-[12px] uppercase tracking-widest text-creme-brulee group-hover:text-mocha-latte transition-colors duration-200">
+      <span class="text-[12px] uppercase tracking-widest text-mocha-latte group-hover:text-espresso-martini transition-colors duration-200">
         View Project →
       </span>
     </div>

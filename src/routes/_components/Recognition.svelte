@@ -55,7 +55,7 @@
 >
   <!-- Header -->
   <div class="max-w-2xl mx-auto flex flex-col items-center text-center mb-[1rem]">
-    <p class="text-[11px] uppercase tracking-[0.3em] text-creme-brulee mb-[16px]">Recognition</p>
+    <p class="text-[11px] uppercase tracking-[0.3em] text-mocha-latte mb-[16px]">Recognition</p>
     <h2 class="font-[fraunces] text-[1.6rem] md:text-5xl text-dark-chocolate leading-tight">
       What <em class="italic font-light">people say.</em>
     </h2>
@@ -103,7 +103,7 @@
           <div>
             <p class="font-semibold text-dark-chocolate text-[13px]">{quote.name}</p>
             <p class="text-[12px] text-mocha-latte">{quote.title}</p>
-            <p class="text-[11px] uppercase tracking-widest text-creme-brulee mt-[4px]">{quote.context}</p>
+            <p class="text-[11px] uppercase tracking-widest text-espresso-martini opacity-70 mt-[4px]">{quote.context}</p>
           </div>
         </div>
       {/each}

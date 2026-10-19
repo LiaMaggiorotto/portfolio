@@ -74,7 +74,7 @@
     />
   {:else}
     <div class="w-full h-full flex items-center justify-center">
-      <span class="font-[fraunces] text-coconut-flour text-8xl italic opacity-20">
+      <span aria-hidden="true" class="font-[fraunces] text-coconut-flour text-8xl italic opacity-20">
         {project.title[0]}
       </span>
     </div>
@@ -82,7 +82,7 @@
 </div>
 
 <!-- Content -->
-<main class="max-w-3xl mx-auto px-[2rem] py-[5rem]">
+<main id="main-content" class="max-w-3xl mx-auto px-[2rem] py-[5rem]">
   <!-- Tech stack pills -->
   <div class="flex flex-wrap gap-[8px] mb-[28px]">
     {#each project.techStack as tech}
@@ -116,10 +116,10 @@
   <!-- Optional image gallery -->
   {#if project.images && project.images.length > 0}
     <div class="flex flex-row gap-[16px] overflow-x-auto mt-[48px] pb-[8px]">
-      {#each project.images as img}
+      {#each project.images as img, i}
         <img
           src={img}
-          alt={project.title}
+          alt={`${project.title} screenshot ${i + 1}`}
           class="h-[220px] w-auto rounded-[4px] shadow-md flex-shrink-0"
         />
       {/each}
