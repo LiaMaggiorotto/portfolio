@@ -12,7 +12,7 @@
    importing preflight.css, since it's more aggressive than we want). */
 @layer base {
   :root {
-    --font-fraunces: "Fraunces", serif;
+    --font-fraunces: "Fraunces Variable", serif;
     --font-fira: "Fira Mono", monospace;
     --color-whipped-cream: #f5f3ee;
     --color-coconut-flour: #dad5ca;
@@ -37,6 +37,7 @@
   /* Offsets anchor-scrolled sections so the sticky nav doesn't cover their heading */
   #about,
   #resume,
+  #skills,
   #portfolio,
   #recognition,
   #contact {

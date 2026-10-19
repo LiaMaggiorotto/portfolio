@@ -1,12 +1,54 @@
 <script>
+  import { page } from "$app/state";
+
   export let data;
   const { project } = data;
 
   let heroError = false;
+
+  const title = `${project.title} | Lia Maggiorotto`;
+  const description = project.shortDescription;
+  const canonical = new URL(page.url.pathname, page.url.origin).href;
+  const ogImage = project.imgSrc
+    ? new URL(project.imgSrc, page.url.origin).href
+    : new URL("/images/lia.jpeg", page.url.origin).href;
+
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.title,
+    description: project.shortDescription,
+    url: canonical,
+    image: ogImage,
+    creator: {
+      "@type": "Person",
+      name: "Lia Maggiorotto",
+      url: new URL("/", page.url.origin).href,
+    },
+    keywords: project.techStack.join(", "),
+  };
 </script>
 
 <svelte:head>
-  <title>{project.title} — Lia Maggiorotto</title>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Lia Maggiorotto" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  {@html `<script type="application/ld+json">${JSON.stringify(projectSchema)}<\/script>`}
 </svelte:head>
 
 <!-- Nav bar replacement: back link -->

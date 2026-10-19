@@ -1,5 +1,5 @@
 <script>
-  let subheading = "Full Stack Software Engineer — Kansas City";
+  let subheading = "Full Stack Software Engineer · Kansas City · Open to Remote";
   let small = "Let's build something meaningful.";
 </script>
 

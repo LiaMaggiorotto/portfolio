@@ -1,4 +1,8 @@
 <script>
+  import "@fontsource-variable/fraunces/wght.css";
+  import "@fontsource-variable/fraunces/wght-italic.css";
+  import "@fontsource/fira-mono/400.css";
+  import "@fontsource/fira-mono/700.css";
   import "../app.css";
 
   let { children } = $props();

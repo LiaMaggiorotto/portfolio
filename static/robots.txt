@@ -1,3 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+# Update this once the real domain is connected (see svelte.config.js)
+Sitemap: https://liamaggiorotto.com/sitemap.xml
