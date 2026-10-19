@@ -201,6 +201,34 @@
     background-color: var(--color-olive-branch);
   }
 
+  .border-whipped-cream {
+    border-color: var(--color-whipped-cream);
+  }
+
+  .border-coconut-flour {
+    border-color: var(--color-coconut-flour);
+  }
+
+  .border-creme-brulee {
+    border-color: var(--color-creme-brulee);
+  }
+
+  .border-mocha-latte {
+    border-color: var(--color-mocha-latte);
+  }
+
+  .border-espresso-martini {
+    border-color: var(--color-espresso-martini);
+  }
+
+  .border-dark-chocolate {
+    border-color: var(--color-dark-chocolate);
+  }
+
+  .border-olive-branch {
+    border-color: var(--color-olive-branch);
+  }
+
   .font-fraunces {
     font-family: var(--font-fraunces);
   }

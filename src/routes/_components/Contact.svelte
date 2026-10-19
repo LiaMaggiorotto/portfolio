@@ -3,15 +3,18 @@
   class="relative w-full overflow-hidden py-[4rem] px-[1.5rem] md:py-[7rem] md:px-[4rem] bg-espresso-martini flex flex-col items-center text-center"
 >
   <!-- Decorative shapes -->
-  <div aria-hidden="true" class="pointer-events-none absolute inset-0 z-0">
+  <div aria-hidden="true" style="pointer-events: none; position: absolute; inset: 0; z-index: 0;">
     <div
-      class="absolute -top-[120px] -right-[120px] w-[320px] h-[320px] md:w-[420px] md:h-[420px] rounded-full border border-creme-brulee opacity-20"
+      style="position: absolute; top: -120px; right: -120px; width: 320px; height: 320px; border-radius: 9999px; border: 2px solid #a1846e; opacity: 0.6;"
     ></div>
     <div
-      class="absolute -top-[60px] -right-[60px] w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full bg-mocha-latte opacity-15 blur-2xl"
+      style="position: absolute; top: -40px; right: -40px; width: 220px; height: 220px; border-radius: 9999px; background-color: #5b4338; opacity: 0.5; filter: blur(60px);"
     ></div>
     <div
-      class="absolute -bottom-[80px] -left-[80px] w-[220px] h-[220px] rounded-full border border-coconut-flour opacity-10"
+      style="position: absolute; bottom: -90px; left: -90px; width: 260px; height: 260px; border-radius: 9999px; border: 2px solid #dad5ca; opacity: 0.3;"
+    ></div>
+    <div
+      style="position: absolute; bottom: -30px; left: -30px; width: 140px; height: 140px; border-radius: 9999px; background-color: #a1846e; opacity: 0.25; filter: blur(40px);"
     ></div>
   </div>
 
