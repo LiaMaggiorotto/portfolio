@@ -1,6 +1,7 @@
 export const projects = [
   {
   slug: 'cdlcp-post-apply-leadflow',
+  featured: true,
   title: 'Post-Apply Lead Routing Engine',
   shortDescription:
     'Designed and built a weighted A/B routing engine with sticky lead assignment, per-client feature flags, server-side validation, a full admin UI, and a 37-case test suite — rolled out live per client with the legacy flow suppressed on a win, and a one-flag rollback if anything looked wrong.',
@@ -17,6 +18,7 @@ This wasn't a shadow deployment — once a lead rolled into a custom flow, a lis
 },
 {
   slug: 'cdlconnect-pro',
+  featured: true,
   title: 'CDLConnect Pro - Recruiter Analytics Dashboard',
   shortDescription:
     'Contributed across the full stack of a production recruiter analytics platform - implementing role-based access control, god view dashboards, BigQuery-backed data pipelines, and post-launch stabilization across 168 commits.',
@@ -33,6 +35,7 @@ Post-launch, I owned stabilization across 168 commits - the kind of sustained ow
 },
 {
   slug: 'cosmic-flow',
+  featured: true,
   title: 'Cosmic Flow - Mobile App Platform',
   status: 'In development',
   shortDescription:
@@ -54,6 +57,7 @@ It's still in development, and I'm keeping v1 to a working core on purpose. Fini
 },
 {
   slug: 'ai-post-analysis-pipeline',
+  featured: true,
   title: 'AI-Powered Post Analysis Pipeline',
   shortDescription:
     'Built a production LLM pipeline classifying ~33K mobile app posts using GPT-4o-mini — with SHA-256 caching, token optimization, strict output validation, and partial MongoDB indexes, engineered within Node v10 constraints.',
@@ -71,6 +75,7 @@ The entire thing was engineered within Node v10 constraints, which meant no Open
 
 {
   slug: 'cdl-job-landing-pages',
+  featured: true,
   title: 'High-Performance CDL Job Landing Pages',
   shortDescription:
     'Replaced a costly third-party job listing service with an in-house SvelteKit system delivering Lighthouse 100 SEO-optimized pages, structured data, automatic sitemaps, and in-memory caching at scale.',
@@ -87,6 +92,7 @@ The result: Lighthouse 100 on performance, the vendor contract eliminated, and m
 },
 {
   slug: 'cdllife-copilot',
+  featured: true,
   title: 'CDLLife Copilot - Driver Job Application Portal',
   shortDescription:
     'Took ownership of a SvelteKit 2 driver portal after more than a year in development, with two weeks to get it production ready. Hardened authentication, fixed a real verification security gap, and closed out the performance and UX work left before launch.',
@@ -108,4 +114,8 @@ Past the backend work, I mapped how driver identity actually flows across three 
 
 export function getProject(slug) {
   return projects.find((p) => p.slug === slug) ?? null;
+}
+
+export function getFeaturedProjects() {
+  return projects.filter((p) => p.featured);
 }

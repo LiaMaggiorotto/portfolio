@@ -5,6 +5,7 @@ export const prerender = true;
 export function GET({ url }) {
   const pages = [
     { path: "/", priority: "1.0" },
+    { path: "/projects", priority: "0.6" },
     ...projects.map((p) => ({ path: `/projects/${p.slug}`, priority: "0.8" })),
   ];
 

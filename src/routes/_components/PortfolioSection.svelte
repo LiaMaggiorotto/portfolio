@@ -1,6 +1,8 @@
 <script>
   import PortfolioItem from "./PortfolioItem.svelte";
-  import { projects } from "$lib/projects.js";
+  import { getFeaturedProjects } from "$lib/projects.js";
+
+  const projects = getFeaturedProjects();
 </script>
 
 <section
@@ -40,6 +42,13 @@
       </div>
     {/each}
   </div>
+
+  <a
+    href="/projects"
+    class="mt-[2.5rem] md:mt-[3.5rem] text-[12px] uppercase tracking-widest text-creme-brulee hover:text-coconut-flour transition-colors duration-200"
+  >
+    View All Projects →
+  </a>
 </section>
 
 <style>
