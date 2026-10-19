@@ -7,6 +7,8 @@
   <img
     src="/images/header.jpg"
     alt=""
+    width="2400"
+    height="1350"
     class="absolute inset-0 w-full h-full object-cover object-bottom"
   />
 

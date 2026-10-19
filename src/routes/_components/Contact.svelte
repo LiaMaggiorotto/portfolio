@@ -1,56 +1,71 @@
 <section
   id="contact"
-  class="w-full py-[4rem] px-[1.5rem] md:py-[7rem] md:px-[4rem] bg-espresso-martini flex flex-col items-center text-center"
+  class="relative w-full overflow-hidden py-[4rem] px-[1.5rem] md:py-[7rem] md:px-[4rem] bg-espresso-martini flex flex-col items-center text-center"
 >
-  <p class="text-[11px] uppercase tracking-[0.3em] text-coconut-flour mb-[16px]">Contact</p>
+  <!-- Decorative shapes -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 z-0">
+    <div
+      class="absolute -top-[120px] -right-[120px] w-[320px] h-[320px] md:w-[420px] md:h-[420px] rounded-full border border-creme-brulee opacity-20"
+    ></div>
+    <div
+      class="absolute -top-[60px] -right-[60px] w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full bg-mocha-latte opacity-15 blur-2xl"
+    ></div>
+    <div
+      class="absolute -bottom-[80px] -left-[80px] w-[220px] h-[220px] rounded-full border border-coconut-flour opacity-10"
+    ></div>
+  </div>
 
-  <h2 class="font-[fraunces] text-[1.6rem] md:text-5xl text-coconut-flour leading-tight mb-[20px]">
-    Let's work <em class="italic font-light">together.</em>
-  </h2>
+  <div class="relative z-10 flex flex-col items-center text-center">
+    <p class="text-[11px] uppercase tracking-[0.3em] text-coconut-flour mb-[16px]">Contact</p>
 
-  <div class="w-[40px] h-[1px] bg-creme-brulee mb-[28px]"></div>
+    <h2 class="font-[fraunces] text-[1.6rem] md:text-5xl text-coconut-flour leading-tight mb-[20px]">
+      Let's work <em class="italic font-light">together.</em>
+    </h2>
 
-  <p class="text-coconut-flour text-[14px] leading-relaxed max-w-[480px] opacity-70 mb-[56px] md:mb-[64px]">
-    I'm open to full-time roles, contract work, and collaborative projects. If you're building
-    something meaningful, I'd love to hear about it.
-  </p>
+    <div class="w-[40px] h-[1px] bg-creme-brulee mb-[28px]"></div>
 
-  <!-- Email -->
-  <a
-    href="mailto:liamaggiorotto@gmail.com"
-    class="font-[fraunces] text-lg md:text-2xl text-coconut-flour hover:text-creme-brulee transition-colors duration-300 mb-[48px] break-all md:break-normal px-[1rem] md:px-0"
-  >
-    liamaggiorotto@gmail.com
-  </a>
+    <p class="text-coconut-flour text-[14px] leading-relaxed max-w-[480px] opacity-70 mb-[56px] md:mb-[64px]">
+      I'm open to full-time roles, contract work, and collaborative projects. If you're building
+      something meaningful, I'd love to hear about it.
+    </p>
 
-  <!-- Social links -->
-  <div class="flex gap-[24px] items-center">
+    <!-- Email -->
     <a
-      href="https://www.linkedin.com/in/liamaggiorotto"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="flex items-center gap-[8px] text-[12px] uppercase tracking-widest text-coconut-flour hover:text-creme-brulee transition-colors duration-200"
+      href="mailto:liamaggiorotto@gmail.com"
+      class="font-[fraunces] text-lg md:text-2xl text-coconut-flour hover:text-creme-brulee transition-colors duration-300 mb-[48px] break-all md:break-normal px-[1rem] md:px-0"
     >
-      <!-- LinkedIn icon -->
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z" fill="currentColor"/>
-      </svg>
-      LinkedIn
+      liamaggiorotto@gmail.com
     </a>
 
-    <span class="text-creme-brulee opacity-40">|</span>
+    <!-- Social links -->
+    <div class="flex gap-[24px] items-center">
+      <a
+        href="https://www.linkedin.com/in/liamaggiorotto"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-[8px] text-[12px] uppercase tracking-widest text-coconut-flour hover:text-creme-brulee transition-colors duration-200"
+      >
+        <!-- LinkedIn icon -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z" fill="currentColor"/>
+        </svg>
+        LinkedIn
+      </a>
 
-    <a
-      href="https://github.com/liamaggiorotto"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="flex items-center gap-[8px] text-[12px] uppercase tracking-widest text-coconut-flour hover:text-creme-brulee transition-colors duration-200"
-    >
-      <!-- GitHub icon (inline, color-controlled) -->
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5807 20.2772 21.0497 21.7437 19.0074C23.2101 16.965 23.9993 14.5143 24 12C24 5.37 18.63 0 12 0Z" fill="currentColor"/>
-      </svg>
-      GitHub
-    </a>
+      <span class="text-creme-brulee opacity-40">|</span>
+
+      <a
+        href="https://github.com/liamaggiorotto"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-[8px] text-[12px] uppercase tracking-widest text-coconut-flour hover:text-creme-brulee transition-colors duration-200"
+      >
+        <!-- GitHub icon (inline, color-controlled) -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.795 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C6 21.135 5.22 19.845 4.98 19.17C4.845 18.825 4.26 17.76 3.75 17.475C3.33 17.25 2.73 16.695 3.735 16.68C4.68 16.665 5.355 17.55 5.58 17.91C6.66 19.725 8.385 19.215 9.075 18.9C9.18 18.12 9.495 17.595 9.84 17.295C7.17 16.995 4.38 15.96 4.38 11.37C4.38 10.065 4.845 8.985 5.61 8.145C5.49 7.845 5.07 6.615 5.73 4.965C5.73 4.965 6.735 4.65 9.03 6.195C9.99 5.925 11.01 5.79 12.03 5.79C13.05 5.79 14.07 5.925 15.03 6.195C17.325 4.635 18.33 4.965 18.33 4.965C18.99 6.615 18.57 7.845 18.45 8.145C19.215 8.985 19.68 10.05 19.68 11.37C19.68 15.975 16.875 16.995 14.205 17.295C14.64 17.67 15.015 18.39 15.015 19.515C15.015 21.12 15 22.41 15 22.815C15 23.13 15.225 23.505 15.825 23.385C18.2072 22.5807 20.2772 21.0497 21.7437 19.0074C23.2101 16.965 23.9993 14.5143 24 12C24 5.37 18.63 0 12 0Z" fill="currentColor"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
   </div>
 </section>

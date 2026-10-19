@@ -28,7 +28,7 @@ My work spanned the full stack across two major release cycles. On the frontend,
 
 Post-launch, I owned stabilization across 168 commits - the kind of sustained ownership that follows a major release when the real edge cases emerge. That included parallelizing key pipeline functions, reconfiguring CI/CD to unblock a deployment blocked by unrelated test script failures, and conducting security audits on new API routes. I also reviewed PRs exceeding 5,000 lines of changes, providing architectural guidance across frontend, backend, and data systems.`,
   techStack: ['SvelteKit', 'TypeScript', 'BigQuery', 'Node.js', 'MongoDB'],
-  imgSrc: '/images/cdlconnect_pro.png',
+  imgSrc: '/images/cdlconnect_pro.webp',
   images: [],
   liveUrl: 'https://pro.cdlconnect.io',
   githubUrl: null,
@@ -50,7 +50,7 @@ On the front end, the mobile app and the admin share one design token package an
 
 It's still in development, and I'm keeping v1 to a working core on purpose. Finishing a smaller thing teaches me more than half-building a bigger one.`,
   techStack: ['React Native', 'Expo', 'TypeScript', 'Express', 'MongoDB', 'Redis', 'Next.js', 'shadcn/ui'],
-  imgSrc: '/images/cosmic-flow.jpg',
+  imgSrc: '/images/cosmic-flow.webp',
   images: [],
   liveUrl: null,
   githubUrl: null,
@@ -85,7 +85,7 @@ The system uses SvelteKit's server-side rendering to generate fully optimized pa
 
 The result: Lighthouse 100 on performance, the vendor contract eliminated, and measurably improved organic search rankings tracked through Search Console post-launch. The system has run in production without incident since launch and serves as the primary organic acquisition surface for the platform.`,
   techStack: ['SvelteKit', 'Node.js', 'MongoDB', 'SEO', 'JSON-LD'],
-  imgSrc: '/images/joblist.png',
+  imgSrc: '/images/joblist.webp',
   images: [],
   liveUrl: 'https://cdllife.com/jobslist',
   githubUrl: null,

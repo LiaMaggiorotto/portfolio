@@ -9,11 +9,12 @@
   class="About flex flex-col md:flex-row gap-[32px] md:gap-[60px] py-[3rem] px-[1.5rem] md:py-[6rem] md:px-[5rem] bg-coconut-flour"
 >
   <!-- Image side -->
-  <div class="About-image w-full md:w-[45%] flex justify-center items-start">
+  <div class="About-image w-full md:w-[45%] flex justify-center items-center">
     <img
-      src="/images/lia.jpeg"
+      src="/images/lia.webp"
       alt="Lia Maggiorotto"
-      class="w-full max-w-[360px] object-cover rounded-[4px] shadow-xl animate-fade-in"
+      loading="lazy"
+      class="w-[360px] h-[480px] object-cover rounded-[4px] shadow-xl animate-fade-in"
     />
   </div>
 

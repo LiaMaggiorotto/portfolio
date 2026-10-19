@@ -50,7 +50,7 @@
   </div>
 
   <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-[20px] md:gap-[28px] w-full max-w-5xl">
-    {#each projects as project}
+    {#each projects as project, i}
       <PortfolioItem
         title={project.title}
         shortDescription={project.shortDescription}
@@ -59,6 +59,7 @@
         techStack={project.techStack}
         slug={project.slug}
         status={project.status}
+        priority={i === 0}
       />
     {/each}
   </div>
