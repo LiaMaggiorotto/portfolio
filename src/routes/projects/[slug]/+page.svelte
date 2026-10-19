@@ -11,7 +11,7 @@
   const canonical = new URL(page.url.pathname, page.url.origin).href;
   const ogImage = project.imgSrc
     ? new URL(project.imgSrc, page.url.origin).href
-    : new URL("/images/lia.jpeg", page.url.origin).href;
+    : new URL("/images/lia.webp", page.url.origin).href;
 
   const projectSchema = {
     "@context": "https://schema.org",

@@ -14,7 +14,7 @@
       src="/images/lia.webp"
       alt="Lia Maggiorotto"
       loading="lazy"
-      class="w-[360px] h-[480px] object-cover rounded-[4px] shadow-xl animate-fade-in"
+      class="w-[335px] h-[480px] object-cover rounded-[4px] shadow-xl animate-fade-in"
     />
   </div>
 

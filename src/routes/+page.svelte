@@ -11,7 +11,7 @@
   const title = "Lia Maggiorotto | Full-Stack Software Engineer";
   const description =
     "Full-stack software engineer based in Kansas City, open to remote roles. I build and ship production systems, from authentication fixes to LLM pipelines to analytics platforms.";
-  const ogImage = new URL("/images/lia.jpeg", page.url.origin).href;
+  const ogImage = new URL("/images/lia.webp", page.url.origin).href;
   const canonical = new URL(page.url.pathname, page.url.origin).href;
 
   const personSchema = {

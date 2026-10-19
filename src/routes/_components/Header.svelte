@@ -5,10 +5,11 @@
 
 <section class="Header relative w-full h-[80vh] lg:h-[92vh]">
   <img
-    src="/images/header.jpg"
+    src="/images/header.webp"
     alt=""
     width="2400"
     height="1350"
+    fetchpriority="high"
     class="absolute inset-0 w-full h-full object-cover object-bottom"
   />
 
