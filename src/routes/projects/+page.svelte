@@ -60,6 +60,7 @@
         slug={project.slug}
         status={project.status}
         priority={i === 0}
+        from="/projects"
       />
     {/each}
   </div>

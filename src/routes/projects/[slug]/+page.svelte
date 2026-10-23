@@ -1,9 +1,31 @@
 <script>
   import { page } from "$app/state";
   import { marked } from "marked";
+  import { onMount } from "svelte";
 
   export let data;
   const { project } = data;
+
+  // Defaults to the all-projects list, the safest landing spot for a
+  // direct link, a shared URL, or private browsing where sessionStorage
+  // is blocked, then swaps to wherever the visitor actually came from.
+  let backHref = "/projects";
+  let backLabel = "All Projects";
+
+  onMount(() => {
+    try {
+      const origin = sessionStorage.getItem("portfolioBackTo");
+      if (origin === "/#portfolio") {
+        backHref = "/#portfolio";
+        backLabel = "Home";
+      } else if (origin === "/projects") {
+        backHref = "/projects";
+        backLabel = "All Projects";
+      }
+    } catch (e) {
+      // sessionStorage unavailable (private browsing, etc.), keep the default.
+    }
+  });
 
   let heroError = false;
 
@@ -86,10 +108,10 @@
   class="sticky top-0 z-[100] flex items-center px-[2rem] py-[1.25rem] bg-whipped-cream border-b border-coconut-flour"
 >
   <a
-    href="/#portfolio"
+    href={backHref}
     class="text-[11px] uppercase tracking-[0.3em] text-espresso-martini hover:text-mocha-latte transition-colors duration-200"
   >
-    ← All Projects
+    ← {backLabel}
   </a>
 </header>
 

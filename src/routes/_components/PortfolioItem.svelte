@@ -6,12 +6,25 @@
   export let techStack = [];
   export let slug = "";
   export let status = "";
+  // Where this card is being viewed from, so the project page's back link
+  // can return here instead of always going to the homepage.
+  export let from = "/#portfolio";
 
   let imgError = false;
+
+  function rememberOrigin() {
+    try {
+      sessionStorage.setItem("portfolioBackTo", from);
+    } catch (e) {
+      // sessionStorage can throw in private browsing or if blocked; the
+      // project page just falls back to its default in that case.
+    }
+  }
 </script>
 
 <a
   href="/projects/{slug}"
+  on:click={rememberOrigin}
   class="PortfolioItem group flex flex-col h-full bg-coconut-flour rounded-[4px] overflow-hidden shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl no-underline"
 >
   <!-- Image -->
