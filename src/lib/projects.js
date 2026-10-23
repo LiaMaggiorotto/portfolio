@@ -130,7 +130,11 @@ The school directory (80+ listings, filterable by certification type, class type
 
 ## Directory search
 
-Filtering already existed on the directory but was largely broken across the board, not just location. I made every filter and dropdown actually work. Program-level detail didn't exist at all. I rebuilt both over about two weeks. Per-program display now shows carrier info alongside online and in-person options, which meant updating the schema and types and passing filenames through the uploader for the new per-program assets. For location search, I paired a zip-code lookup package with a geo query against the school data to return results within an actual search radius, replacing filtering that didn't work.
+The existing directory filters were unreliable across multiple filter types, and the site lacked program-level detail. I rebuilt the filtering experience and introduced individual program displays.
+
+The work included updating the data schema and TypeScript types to support program-level information, displaying carrier details alongside online and in-person training options, and extending the upload workflow to associate assets with individual programs.
+
+I also replaced the broken location filtering with radius-based search. By combining a ZIP code lookup package with a geospatial query against school data, I enabled users to find schools within an actual search radius instead of relying on the previous, nonfunctional filtering behavior.
 
 ## Visibility
 
