@@ -163,7 +163,7 @@ As the first step in that roadmap, I selected Node.js 16 as an intermediate targ
 - **Root-cause analysis:** Investigating the actual causes of build and dependency failures instead of applying superficial fixes.
 - **Production verification:** Validating deployed behavior under production-like conditions, not just that it compiled.`,
   techStack: ['Node.js', 'TypeScript', 'MongoDB', 'Mongoose', 'Heroku', 'Gulp'],
-  imgSrc: null,
+  imgSrc: '/images/node-modernization.png',
   images: [],
   liveUrl: null,
   githubUrl: null,
