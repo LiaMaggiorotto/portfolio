@@ -7,6 +7,18 @@
 
   let heroError = false;
 
+  // Combine the primary image with any gallery images so the hero can
+  // cycle through all of them as a carousel when there's more than one.
+  const heroImages = [project.imgSrc, ...(project.images || [])].filter(Boolean);
+  let heroIndex = 0;
+
+  function nextHero() {
+    heroIndex = (heroIndex + 1) % heroImages.length;
+  }
+  function prevHero() {
+    heroIndex = (heroIndex - 1 + heroImages.length) % heroImages.length;
+  }
+
   // Content comes only from our own projects.js, never user input, so
   // rendering it as HTML is safe. marked turns ## headers, **bold**, and
   // bullet lists into real markup instead of literal asterisks and dashes.
@@ -81,15 +93,43 @@
   </a>
 </header>
 
-<!-- Hero image -->
-<div class="w-full h-auto md:h-[420px] bg-dark-chocolate overflow-hidden">
-  {#if project.imgSrc && !heroError}
+<!-- Hero image / carousel -->
+<div class="relative w-full h-auto md:h-[420px] bg-dark-chocolate overflow-hidden">
+  {#if heroImages.length > 0 && !heroError}
     <img
-      src={project.imgSrc}
-      alt={project.title}
+      src={heroImages[heroIndex]}
+      alt={`${project.title}${heroImages.length > 1 ? ` screenshot ${heroIndex + 1}` : ""}`}
       class="w-full h-full object-contain opacity-90"
       on:error={() => (heroError = true)}
     />
+    {#if heroImages.length > 1}
+      <button
+        type="button"
+        aria-label="Previous image"
+        on:click={prevHero}
+        class="absolute left-[12px] top-1/2 -translate-y-1/2 w-[36px] h-[36px] rounded-full bg-dark-chocolate/60 text-whipped-cream flex items-center justify-center hover:bg-dark-chocolate/80 transition-colors duration-200"
+      >
+        ‹
+      </button>
+      <button
+        type="button"
+        aria-label="Next image"
+        on:click={nextHero}
+        class="absolute right-[12px] top-1/2 -translate-y-1/2 w-[36px] h-[36px] rounded-full bg-dark-chocolate/60 text-whipped-cream flex items-center justify-center hover:bg-dark-chocolate/80 transition-colors duration-200"
+      >
+        ›
+      </button>
+      <div class="absolute bottom-[14px] left-1/2 -translate-x-1/2 flex gap-[8px]">
+        {#each heroImages as _, i}
+          <button
+            type="button"
+            aria-label={`Show image ${i + 1}`}
+            on:click={() => (heroIndex = i)}
+            class="w-[7px] h-[7px] rounded-full transition-colors duration-200 {i === heroIndex ? 'bg-whipped-cream' : 'bg-whipped-cream/40'}"
+          ></button>
+        {/each}
+      </div>
+    {/if}
   {:else}
     <div class="w-full h-full flex items-center justify-center">
       <span aria-hidden="true" class="font-[fraunces] text-coconut-flour text-8xl italic opacity-20">
@@ -128,19 +168,6 @@
   <div class="project-description flex flex-col gap-[20px]">
     {@html descriptionHtml}
   </div>
-
-  <!-- Optional image gallery -->
-  {#if project.images && project.images.length > 0}
-    <div class="flex flex-row gap-[16px] overflow-x-auto mt-[48px] pb-[8px]">
-      {#each project.images as img, i}
-        <img
-          src={img}
-          alt={`${project.title} screenshot ${i + 1}`}
-          class="h-[220px] w-auto rounded-[4px] shadow-md flex-shrink-0"
-        />
-      {/each}
-    </div>
-  {/if}
 
   <!-- CTA buttons -->
   <div class="flex gap-[16px] mt-[48px]">
