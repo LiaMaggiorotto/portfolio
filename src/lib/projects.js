@@ -112,6 +112,62 @@ It's still in development, and I'm keeping v1 to a working core on purpose. Fini
   liveUrl: null,
   githubUrl: null,
 },
+{
+  slug: 'legacy-node-api-modernization',
+  featured: false,
+  title: 'Legacy Node.js API Modernization',
+  shortDescription:
+    'Upgraded two production APIs off Node.js 10 - a mobile API to Node 20 with a TypeScript 2.6 to 5.9 overhaul across ~160 files and ~1,000 imports, and a lead-generation API to Node 16 using an incremental strategy after an earlier Node 18 attempt had stalled.',
+  longDescription: `## Overview
+
+I worked on modernizing two APIs that had been running on Node.js 10: a mobile API upgraded to Node.js 20 and a lead-generation API upgraded to Node.js 16.
+
+Although both projects started with the same underlying problem, they required different approaches. The mobile API involved a broader runtime and TypeScript modernization across a large codebase. The lead-generation API required a more incremental migration strategy that accounted for compatibility constraints, legacy build tooling, and deployment behavior.
+
+## Project 1: Mobile API Modernization
+
+**Node.js 10 to 20 | TypeScript 2.6 to 5.9**
+
+### The challenge
+
+The mobile API was running on an outdated Node.js runtime and an older TypeScript toolchain. Modernizing the runtime meant addressing compatibility issues throughout the codebase, including changes in language tooling and deprecated Mongoose APIs. This wasn't a simple runtime configuration change: it required coordinated changes across a substantial number of files while maintaining compatibility with the existing application.
+
+### The approach
+
+- **Runtime modernization:** Upgraded Node.js from 10 to 20.
+- **TypeScript modernization:** Upgraded TypeScript from 2.6 to 5.9 and handled the resulting codebase compatibility changes.
+- **Large-scale refactoring:** Updated approximately 160 files and converted approximately 1,000 imports as part of the migration.
+- **Database compatibility:** Addressed Mongoose deprecations introduced by the modernization effort.
+- **Legacy integration constraints:** Some modern SDKs weren't viable within the old runtime, which made direct HTTPS integration the more practical choice for external API communication.
+
+## Project 2: Lead Generation API Modernization
+
+**Node.js 10 to 16 | Heroku**
+
+### The challenge
+
+Previous upgrade attempts involving Node.js 18 and MongoDB 7 had stalled, and our CTO had real reservations about taking on another attempt. I pushed for it anyway: staying on Node 10 was a growing security liability, and it was quietly blocking us from adopting the modern AI tooling the rest of the team wanted to use. Rather than re-attempting the full jump to 18, I proposed a phased path toward the current Node version, with 16 as the deliberate first step, since 18 on its own required a larger overhaul than we could safely absorb in one move.
+
+### The approach
+
+As the first step in that roadmap, I selected Node.js 16 as an intermediate target, skipping Node.js 14 because of Apple Silicon compatibility issues encountered during development, and deliberately deferred crypto and Buffer-related changes to a subsequent Node 16-to-18 migration.
+
+- **Build pipeline debugging:** Traced a Gulp build hang to a missing callback in an asynchronous series.
+- **Dependency conflict prevention:** Identified a latent Lodash version collision before it reached production.
+- **Deployment troubleshooting:** Addressed two Heroku-specific issues affecting the deployment workflow.
+- **Production verification:** Used Heroku Review Apps to validate the application end to end.
+
+## What This Demonstrates
+
+- **Incremental modernization:** Choosing migration boundaries based on actual compatibility constraints, not pursuing every upgrade simultaneously.
+- **Root-cause analysis:** Investigating the actual causes of build and dependency failures instead of applying superficial fixes.
+- **Production verification:** Validating deployed behavior under production-like conditions, not just that it compiled.`,
+  techStack: ['Node.js', 'TypeScript', 'MongoDB', 'Mongoose', 'Heroku', 'Gulp'],
+  imgSrc: null,
+  images: [],
+  liveUrl: null,
+  githubUrl: null,
+},
 ];
 
 export function getProject(slug) {

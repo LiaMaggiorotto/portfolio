@@ -9,6 +9,8 @@ memory
 .wrangler
 /.svelte-kit
 /build
+/build_stale_*
+/.svelte-kit_stale_*
 
 # OS
 .DS_Store
