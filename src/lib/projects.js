@@ -29,30 +29,9 @@ My work spanned the full stack across two major release cycles. On the frontend,
 Post-launch, I owned stabilization across 168 commits - the kind of sustained ownership that follows a major release when the real edge cases emerge. That included parallelizing key pipeline functions, reconfiguring CI/CD to unblock a deployment blocked by unrelated test script failures, and conducting security audits on new API routes. I also reviewed PRs exceeding 5,000 lines of changes, providing architectural guidance across frontend, backend, and data systems.`,
   techStack: ['SvelteKit', 'TypeScript', 'BigQuery', 'Node.js', 'MongoDB'],
   imgSrc: '/images/cdlconnect_pro.webp',
+  ogImage: '/images/cdlconnect_pro-og.jpg',
   images: [],
   liveUrl: 'https://pro.cdlconnect.io',
-  githubUrl: null,
-},
-{
-  slug: 'cosmic-flow',
-  featured: true,
-  title: 'Cosmic Flow - Mobile App Platform',
-  status: 'In development',
-  shortDescription:
-    'A mobile app I\'m building to learn system design by doing it, one layer at a time. React Native client, Express API on MongoDB and Redis, a Next.js admin, and a shared design system, all in one TypeScript monorepo.',
-  longDescription: `I started Cosmic Flow to get better at system design, and I wanted to learn it by building something real instead of whiteboarding hypotheticals. The goal is to go deep on every layer, including the ones I haven't touched at work. It's also the project where the creative side is entirely mine, from the brand to the interface to the product, and that's a big part of why I love it.
-
-The system design came first. I worked through requirements, entities, API, storage and architecture before writing code, which left me with seven entities to model. Five live in MongoDB. The other two are derived, so they live only in Redis with TTLs and are cheap to lose. Mongo is a hard dependency at boot and Redis is not, so a cache outage degrades those routes instead of taking the API down.
-
-Auth and security got the same attention. Phone and SMS login sits behind an AuthProvider interface, so I can swap providers without touching the routes. Sensitive profile fields are encrypted at rest and the API is rate limited. I wrote tests for each of those pieces, plus token handling and error handling, and the auth suite turned up two bugs I fixed right away.
-
-On the front end, the mobile app and the admin share one design token package and one icon library, so a change to a color or an icon lands in one place.
-
-It's still in development, and I'm keeping v1 to a working core on purpose. Finishing a smaller thing teaches me more than half-building a bigger one.`,
-  techStack: ['React Native', 'Expo', 'TypeScript', 'Express', 'MongoDB', 'Redis', 'Next.js', 'shadcn/ui'],
-  imgSrc: '/images/cosmic-flow.webp',
-  images: [],
-  liveUrl: null,
   githubUrl: null,
 },
 {
@@ -86,6 +65,7 @@ The system uses SvelteKit's server-side rendering to generate fully optimized pa
 The result: Lighthouse 100 on performance, the vendor contract eliminated, and measurably improved organic search rankings tracked through Search Console post-launch. The system has run in production without incident since launch and serves as the primary organic acquisition surface for the platform.`,
   techStack: ['SvelteKit', 'Node.js', 'MongoDB', 'SEO', 'JSON-LD'],
   imgSrc: '/images/joblist.webp',
+  ogImage: '/images/joblist-og.jpg',
   images: [],
   liveUrl: 'https://cdllife.com/jobslist',
   githubUrl: null,
@@ -109,7 +89,29 @@ Past the backend work, I mapped how driver identity actually flows across three 
   liveUrl: 'https://copilot.cdllife.com',
   githubUrl: null,
 },
+{
+  slug: 'cosmic-flow',
+  featured: true,
+  title: 'Cosmic Flow - Mobile App Platform',
+  status: 'In development',
+  shortDescription:
+    'A mobile app I\'m building to learn system design by doing it, one layer at a time. React Native client, Express API on MongoDB and Redis, a Next.js admin, and a shared design system, all in one TypeScript monorepo.',
+  longDescription: `I started Cosmic Flow to get better at system design, and I wanted to learn it by building something real instead of whiteboarding hypotheticals. The goal is to go deep on every layer, including the ones I haven't touched at work. It's also the project where the creative side is entirely mine, from the brand to the interface to the product, and that's a big part of why I love it.
 
+The system design came first. I worked through requirements, entities, API, storage and architecture before writing code, which left me with seven entities to model. Five live in MongoDB. The other two are derived, so they live only in Redis with TTLs and are cheap to lose. Mongo is a hard dependency at boot and Redis is not, so a cache outage degrades those routes instead of taking the API down.
+
+Auth and security got the same attention. Phone and SMS login sits behind an AuthProvider interface, so I can swap providers without touching the routes. Sensitive profile fields are encrypted at rest and the API is rate limited. I wrote tests for each of those pieces, plus token handling and error handling, and the auth suite turned up two bugs I fixed right away.
+
+On the front end, the mobile app and the admin share one design token package and one icon library, so a change to a color or an icon lands in one place.
+
+It's still in development, and I'm keeping v1 to a working core on purpose. Finishing a smaller thing teaches me more than half-building a bigger one.`,
+  techStack: ['React Native', 'Expo', 'TypeScript', 'Express', 'MongoDB', 'Redis', 'Next.js', 'shadcn/ui'],
+  imgSrc: '/images/cosmic-flow.webp',
+  ogImage: '/images/cosmic-flow-og.jpg',
+  images: [],
+  liveUrl: null,
+  githubUrl: null,
+},
 ];
 
 export function getProject(slug) {

@@ -11,7 +11,8 @@
   const title = "Lia Maggiorotto | Full-Stack Software Engineer";
   const description =
     "Full-stack software engineer based in Kansas City, open to remote roles. I build and ship production systems, from authentication fixes to LLM pipelines to analytics platforms.";
-  const ogImage = new URL("/images/lia.webp", page.url.origin).href;
+  const ogImageJpg = new URL("/images/lia-og.jpg", page.url.origin).href;
+  const ogImageWebp = new URL("/images/lia.webp", page.url.origin).href;
   const canonical = new URL(page.url.pathname, page.url.origin).href;
 
   const personSchema = {
@@ -20,7 +21,7 @@
     name: "Lia Maggiorotto",
     jobTitle: "Full-Stack Software Engineer",
     url: canonical,
-    image: ogImage,
+    image: ogImageJpg,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Kansas City",
@@ -45,13 +46,14 @@
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
-  <meta property="og:image" content={ogImage} />
+  <meta property="og:image" content={ogImageJpg} />
+  <meta property="og:image" content={ogImageWebp} />
 
-  <!-- Twitter -->
+  <!-- Twitter: no fallback support, so JPEG only -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image" content={ogImageJpg} />
 
   {@html `<script type="application/ld+json">${JSON.stringify(personSchema)}<\/script>`}
 </svelte:head>

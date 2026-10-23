@@ -9,9 +9,18 @@
   const title = `${project.title} | Lia Maggiorotto`;
   const description = project.shortDescription;
   const canonical = new URL(page.url.pathname, page.url.origin).href;
-  const ogImage = project.imgSrc
-    ? new URL(project.imgSrc, page.url.origin).href
-    : new URL("/images/lia.webp", page.url.origin).href;
+  // JPEG is the primary og:image for maximum crawler/platform compatibility.
+  // Raster projects (.webp) get a matching -og.jpg generated alongside them
+  // (see projects.js). Projects with only an SVG thumbnail, or none at all,
+  // fall back to the site-wide portrait JPEG rather than serving an SVG,
+  // which has even worse Open Graph support than WebP.
+  const ogImageJpg = project.ogImage
+    ? new URL(project.ogImage, page.url.origin).href
+    : new URL("/images/lia-og.jpg", page.url.origin).href;
+  const ogImageWebp =
+    project.imgSrc && project.imgSrc.endsWith(".webp")
+      ? new URL(project.imgSrc, page.url.origin).href
+      : null;
 
   const projectSchema = {
     "@context": "https://schema.org",
@@ -19,7 +28,7 @@
     name: project.title,
     description: project.shortDescription,
     url: canonical,
-    image: ogImage,
+    image: ogImageJpg,
     creator: {
       "@type": "Person",
       name: "Lia Maggiorotto",
@@ -40,13 +49,16 @@
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
-  <meta property="og:image" content={ogImage} />
+  <meta property="og:image" content={ogImageJpg} />
+  {#if ogImageWebp}
+    <meta property="og:image" content={ogImageWebp} />
+  {/if}
 
-  <!-- Twitter -->
+  <!-- Twitter: no fallback support, so JPEG only -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image" content={ogImageJpg} />
 
   {@html `<script type="application/ld+json">${JSON.stringify(projectSchema)}<\/script>`}
 </svelte:head>
