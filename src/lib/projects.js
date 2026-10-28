@@ -24,10 +24,10 @@ This wasn't a shadow deployment: once a lead rolled into a custom flow, a listen
     'Contributed across the full stack of a production recruiter analytics platform, implementing role-based access control, god view dashboards, BigQuery-backed data pipelines, and post-launch stabilization across 168 commits.',
   longDescription: `CDLConnect Pro is the analytics layer that recruiters and clients use to measure driver pipeline performance: a high-stakes dashboard where data accuracy and access control directly affect business decisions.
 
-My work spanned the full stack across two major release cycles. On the frontend, I helped build the god view dashboard and recruiter filter system in SvelteKit, giving our team cross-account visibility with scoped permissions. On the backend, I implemented role-based access control across API routes and hardened data pipeline reliability with retry logic and crash guards. Precomputed nightly pipelines replaced expensive on-demand BigQuery queries, reducing load and improving dashboard response times.
+My work spanned the full stack across two major release cycles. On the frontend, I helped build the god view dashboard and recruiter filter system in SvelteKit, giving our team cross-account visibility with scoped permissions. I built the data visualizations throughout with D3, so recruiters and clients alike could read pipeline performance at a glance. On the backend, I implemented role-based access control across API routes and hardened data pipeline reliability with retry logic and crash guards. Precomputed nightly pipelines replaced expensive on-demand BigQuery queries, reducing load and improving dashboard response times.
 
 Post-launch, I owned stabilization across 168 commits, the kind of sustained ownership that follows a major release when the real edge cases emerge. That included parallelizing key pipeline functions, reconfiguring CI/CD to unblock a deployment blocked by unrelated test script failures, and conducting security audits on new API routes. I also reviewed PRs exceeding 5,000 lines of changes, providing architectural guidance across frontend, backend, and data systems.`,
-  techStack: ['SvelteKit', 'TypeScript', 'BigQuery', 'Node.js', 'MongoDB'],
+  techStack: ['SvelteKit', 'TypeScript', 'D3.js', 'BigQuery', 'Node.js', 'MongoDB', 'SQL', 'CSS', 'Tailwind CSS'],
   imgSrc: '/images/cdlconnect_pro.webp',
   ogImage: '/images/cdlconnect_pro-og.jpg',
   images: [],
