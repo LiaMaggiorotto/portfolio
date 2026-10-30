@@ -42,7 +42,9 @@ Post-launch, I owned stabilization across 168 commits, the kind of sustained own
     'Built a production LLM pipeline classifying ~33K mobile app posts using GPT-4o-mini, with SHA-256 caching, token optimization, strict output validation, and partial MongoDB indexes, engineered within Node v10 constraints.',
   longDescription: `The mobile app had tens of thousands of user posts with no structured classification: no way to surface quality content, flag problems, or feed downstream systems. I designed and built a fire-and-forget pipeline to fix that, using GPT-4o-mini to classify posts at scale without blocking the application layer.
 
-The architecture prioritized cost and reliability: SHA-256 content hashing to skip reprocessing identical posts, token-optimized prompts to minimize API spend, and strict output validation to catch malformed model responses before they touched the database. Partial MongoDB indexes kept query performance tight on a growing collection.
+The architecture prioritized cost and reliability: SHA-256 content hashing to skip reprocessing identical posts, token-optimized prompts to minimize API spend, and strict output validation to catch malformed model responses before they touched the database. Partial MongoDB indexes kept query performance tight on a growing collection, and processing ran asynchronously so classification never blocked the application layer.
+
+Each classification carried the model's own confidence score. Posts that fell below a set threshold were surfaced in the mobile admin panel for manual review instead of flowing downstream unchecked, a human-in-the-loop safeguard against the pipeline silently trusting its weakest calls.
 
 The entire thing was engineered within Node v10 constraints, which meant no OpenAI SDK: raw HTTPS requests only. That constraint forced a cleaner separation between transport, parsing, and business logic than the SDK would have encouraged. The pipeline processed the full backlog and new posts, feeding classification data into downstream features.`,
   techStack: ['Node.js', 'MongoDB', 'OpenAI API', 'TypeScript'],
@@ -183,11 +185,11 @@ The mobile API was running on an outdated Node.js runtime and an older TypeScrip
 
 ### The challenge
 
-Previous upgrade attempts involving Node.js 18 and MongoDB 7 had stalled, and our CTO had real reservations about taking on another attempt. I pushed for it anyway: staying on Node 10 was a growing security liability, and it was quietly blocking us from adopting the modern AI tooling the rest of the team wanted to use. Rather than re-attempting the full jump to 18, I proposed a phased path toward the current Node version, with 16 as the deliberate first step, since 18 on its own required a larger overhaul than we could safely absorb in one move.
+Roughly eight months earlier, a different engineer had attempted a direct jump from Node 10 to Node 18 alongside a MongoDB 7 upgrade, which stalled under the weight of too many simultaneous changes and left our CTO wary of another attempt. Staying on Node 10 was a growing security liability, though, and it was quietly blocking the team from adopting the modern AI tooling everyone wanted to use. I pushed to try again with a different approach: a staged migration from 10 to 14 to 16 to 18 to 20+, with each phase independently revertable, its own documented test surface, and a decisions ledger recording the reasoning behind every call, so a bad step could be rolled back on its own instead of threatening the whole effort.
 
 ### The approach
 
-As the first step in that roadmap, I selected Node.js 16 as an intermediate target, skipping Node.js 14 because of Apple Silicon compatibility issues encountered during development, and deliberately deferred crypto and Buffer-related changes to a subsequent Node 16-to-18 migration.
+Phase 1 targeted Node 14 as a low-risk first hop. It hit an Apple Silicon compatibility issue partway through, so I adapted the plan and jumped from 10 straight to 16, skipping 14 entirely. I deliberately deferred the crypto migration (Node 17 removed \`createCipher\`/\`createDecipher\` outright) and a sweep of 16 \`new Buffer()\` call sites to a later 16-to-18 phase, since neither was required to reach 16 safely. Node 18, and eventually 20+, remained the intended next destinations, but I left the role before that work was tasked.
 
 - **Build pipeline debugging:** Traced a Gulp build hang to a missing callback in an asynchronous series.
 - **Dependency conflict prevention:** Identified a latent Lodash version collision before it reached production.
